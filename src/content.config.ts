@@ -8,7 +8,7 @@ const bookSchema = z.object({
   title: z.string(),
   author: z.string().optional().default(''),
   category: z.string().optional().default(''),
-  image: z.url(),
+  image: z.string(),
   rating: z.number().optional(),
   point: z.string(),
   affiliateUrl: z.url(),
@@ -25,7 +25,7 @@ const blog = defineCollection({
     ogImage: z.url().optional(),
     news: z.object({
       title: z.string(),
-      url: z.url(),
+      url: z.string(),
     }),
     books: z.array(bookSchema).default([]),
     ruby: z.string().optional().default(''),
