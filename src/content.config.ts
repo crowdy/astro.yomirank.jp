@@ -1,5 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { z } from 'zod';
 
 const bookSchema = z.object({
   rank: z.number().int(),
@@ -7,10 +8,10 @@ const bookSchema = z.object({
   title: z.string(),
   author: z.string().optional().default(''),
   category: z.string().optional().default(''),
-  image: z.string().url(),
+  image: z.url(),
   rating: z.number().optional(),
   point: z.string(),
-  affiliateUrl: z.string().url(),
+  affiliateUrl: z.url(),
 });
 
 const blog = defineCollection({
@@ -21,10 +22,10 @@ const blog = defineCollection({
     date: z.coerce.date(),
     theme: z.enum(['総合','経済','国内','国際','IT','文化','スポーツ','科学']),
     description: z.string(),
-    ogImage: z.string().url().optional(),
+    ogImage: z.url().optional(),
     news: z.object({
       title: z.string(),
-      url: z.string().url(),
+      url: z.url(),
     }),
     books: z.array(bookSchema).default([]),
     ruby: z.string().optional().default(''),
