@@ -1,0 +1,38 @@
+---
+// Nav.astro: 사이트 전역 헤더 네비게이션
+---
+
+<header class="header">
+  <nav class="nav-container">
+    <div class="nav-left">
+      <a href="/" style="text-decoration: none; color: inherit;">
+        <span class="logo-text">よみランク</span>
+      </a>
+      <span class="nav-badge">読書ガイド</span>
+    </div>
+    <button class="nav-toggle" aria-label="メニューを開閉" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="/" class="nav-link">時事と本</a>
+        <a href="/ranking/" class="nav-link">電子書籍</a>
+        <a href="/paper-ranking/" class="nav-link">紙の本</a>
+        <a href="/japanese-study/" class="nav-link">学習用</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('open');
+    });
+  });
+</script>

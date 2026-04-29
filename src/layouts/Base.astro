@@ -1,0 +1,63 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/common.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  bodyClass?: string;
+  extraStylesheets?: string[];
+}
+
+const {
+  title,
+  description = 'Amazon Kindle・紙の本のベストセラーを時事ニュースとともに紹介する読書ガイド',
+  ogImage,
+  canonicalUrl,
+  bodyClass,
+  extraStylesheets = [],
+} = Astro.props;
+
+const fullTitle = title.endsWith('yomirank.jp') ? title : `${title} | yomirank.jp`;
+const url = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={url} />
+  {ogImage && <meta property="og:image" content={ogImage} />}
+  <meta property="og:site_name" content="yomirank.jp" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  {ogImage && <meta name="twitter:image" content={ogImage} />}
+
+  <link rel="canonical" href={url} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  {extraStylesheets.map((href) => <link rel="stylesheet" href={href} />)}
+</head>
+<body class={bodyClass}>
+  <Nav />
+  <main><slot /></main>
+  <Footer />
+</body>
+</html>
