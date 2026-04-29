@@ -1,0 +1,34 @@
+---
+interface Book {
+  rank: number;
+  asin: string;
+  title: string;
+  author?: string;
+  category?: string;
+  image: string;
+  rating?: number;
+  point?: string;
+  affiliateUrl: string;
+}
+interface Props { book: Book; }
+const { book } = Astro.props;
+const isTop3 = book.rank <= 3;
+---
+
+<a href={book.affiliateUrl} target="_blank" rel="noopener noreferrer" class="book-item">
+  <div class={`book-rank ${isTop3 ? 'top3' : ''}`}>{book.rank}</div>
+  <div class="book-image">
+    <img src={book.image} alt={book.title} loading="lazy" onerror="this.parentElement.style.display='none'" />
+  </div>
+  <div class="book-content">
+    {book.category && <span class="book-category">{book.category}</span>}
+    <h3 class="book-title">{book.title}</h3>
+    {book.author && <div class="book-author">{book.author}</div>}
+    {book.rating !== undefined && (
+      <div class="book-meta">
+        <span class="book-rating">⭐ {book.rating}</span>
+      </div>
+    )}
+    {book.point && <div class="book-point">{book.point}</div>}
+  </div>
+</a>

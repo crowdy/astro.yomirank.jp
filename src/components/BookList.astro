@@ -1,0 +1,21 @@
+---
+import BookCard from './BookCard.astro';
+interface Book {
+  rank: number; asin: string; title: string; author?: string; category?: string;
+  image: string; rating?: number; point?: string; affiliateUrl: string;
+}
+interface Props { books: Book[]; heading?: string; }
+const { books, heading = '📚 おすすめの本' } = Astro.props;
+---
+
+{books.length > 0 && (
+  <section class="recommendations-section">
+    <div class="recommendations-header">
+      <h2>{heading}</h2>
+      <div class="recommendations-meta">書籍数: {books.length}</div>
+    </div>
+    <div class="book-list">
+      {books.map((b) => <BookCard book={b} />)}
+    </div>
+  </section>
+)}
