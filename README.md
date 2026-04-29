@@ -1,43 +1,20 @@
-# Astro Starter Kit: Minimal
+# astro.yomirank.jp
 
-```sh
-pnpm create astro@latest -- --template minimal
+[yomirank.jp](https://yomirank.jp) の Astro 기반 정적 사이트.
+GitHub Pages에 배포된다.
+
+## 개발
+
+```bash
+pnpm install
+pnpm dev          # http://localhost:4321
+pnpm build        # dist/ 생성
+pnpm preview      # 빌드 결과 미리보기
+pnpm test         # vitest 실행 (utils 테스트)
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 콘텐츠 흐름
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+서버측 cron(별도 yomirank.jp 레포)이 `src/content/blog/`에 MD를,
+`src/data/`에 베스트셀러 JSON을 push한다. push가 GH Actions 빌드를
+트리거하여 GitHub Pages로 배포된다.
