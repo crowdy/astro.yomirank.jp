@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const posts = (await getCollection('blog'))
+  .filter((p) => p.data.ruby && p.data.ruby.trim().length > 0)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 50);
+
+function rubyUrl(p: typeof posts[number]) {
+  const d = p.data.date;
+  return `/blog/${d.getFullYear()}/${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}/ruby/${p.data.slug}/`;
+}
+const fmt = new Intl.DateTimeFormat('ja-JP', {
+  year: 'numeric', month: 'long', day: 'numeric',
+  timeZone: 'Asia/Tokyo',
+});
+---
+
+<Base title="日本語学習用記事 (ふりがな付き)">
+  <div class="page-shell">
+    <h1 class="page-title">📖 ふりがな付き記事</h1>
+    <p>日本語学習者向けに、漢字にふりがなを付けた記事一覧です。</p>
+    <ul class="post-list">
+      {posts.map((p) => (
+        <li class="post-list-item">
+          <a href={rubyUrl(p)}>
+            <div class="post-meta">
+              <span class="post-theme">{p.data.theme}</span>
+              <time>{fmt.format(p.data.date)}</time>
+            </div>
+            <h2 class="post-title">{p.data.title}</h2>
+            <p class="post-description">{p.data.description}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>
