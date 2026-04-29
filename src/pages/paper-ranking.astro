@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import BookList from '../components/BookList.astro';
+import data from '../data/bestsellers-paper-latest.json';
+
+const books = (data.books ?? []).map((b: any) => ({
+  rank: b.rank,
+  asin: b.asin,
+  title: b.title,
+  author: b.author,
+  category: b.category,
+  image: b.image,
+  rating: b.rating,
+  point: '',
+  affiliateUrl: b.affiliateUrl,
+}));
+const fmt = new Intl.DateTimeFormat('ja-JP', {
+  year: 'numeric', month: 'long', day: 'numeric',
+  hour: '2-digit', minute: '2-digit',
+  timeZone: 'Asia/Tokyo',
+});
+const scrapedAt = data.scrapedAt ? fmt.format(new Date(data.scrapedAt)) : '';
+---
+
+<Base title="紙の本 ベストセラー">
+  <div class="page-shell">
+    <h1>紙の本 ベストセラー</h1>
+    {scrapedAt && <p class="updated-at">最終更新: {scrapedAt}</p>}
+    <BookList books={books} heading="" />
+  </div>
+</Base>
