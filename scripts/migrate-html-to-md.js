@@ -66,7 +66,7 @@ async function main() {
   const files = await fg('**/*.html', {
     cwd: sourceRoot,
     absolute: true,
-    ignore: ['**/ruby/**'],
+    ignore: ['**/ruby/**', '**/chinese/**'],
   });
 
   console.log(`Found ${files.length} articles to migrate.`);
