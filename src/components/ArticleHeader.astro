@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  date: Date;
+  newsTitle?: string;
+}
+const { title, date, newsTitle } = Astro.props;
+const fmt = new Intl.DateTimeFormat('ja-JP', {
+  year: 'numeric', month: 'long', day: 'numeric',
+  weekday: 'short', hour: '2-digit', minute: '2-digit',
+  hour12: false, timeZone: 'Asia/Tokyo',
+}).format(date);
+---
+
+<header class="article-header">
+  <h1 class="article-title">{title}</h1>
+  <div class="article-meta">
+    <span>📅 {fmt}</span>
+    <span>✏️ 編集部</span>
+    {newsTitle && <span>🏷️ {newsTitle}</span>}
+  </div>
+</header>

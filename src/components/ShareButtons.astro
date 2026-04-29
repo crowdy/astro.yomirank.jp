@@ -1,0 +1,32 @@
+---
+import { buildShareUrls } from '../utils/share-urls';
+interface Props { url: string; title: string; }
+const { url, title } = Astro.props;
+const s = buildShareUrls({ url, title });
+---
+
+<section class="share-section">
+  <h3>この記事をシェア</h3>
+  <div class="share-buttons">
+    <a href={s.x} target="_blank" rel="noopener noreferrer" class="share-btn x">𝕏</a>
+    <a href={s.line} target="_blank" rel="noopener noreferrer" class="share-btn line">LINE</a>
+    <a href={s.hatena} target="_blank" rel="noopener noreferrer" class="share-btn hatena">B!</a>
+    <a href={s.facebook} target="_blank" rel="noopener noreferrer" class="share-btn facebook">FB</a>
+    <a href={s.threads} target="_blank" rel="noopener noreferrer" class="share-btn threads">Threads</a>
+    <a href={s.bluesky} target="_blank" rel="noopener noreferrer" class="share-btn bluesky">Bluesky</a>
+    <a href={s.pocket} target="_blank" rel="noopener noreferrer" class="share-btn pocket">Pocket</a>
+    <button type="button" class="share-btn copy-link" onclick="copyPageUrl()" title="リンクをコピー">🔗 コピー</button>
+  </div>
+  <div id="copy-toast" class="copy-toast">リンクをコピーしました！</div>
+</section>
+
+<script is:inline>
+  function copyPageUrl() {
+    navigator.clipboard.writeText(location.href).then(() => {
+      const t = document.getElementById('copy-toast');
+      if (!t) return;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2000);
+    });
+  }
+</script>
