@@ -1,0 +1,16 @@
+{
+  "scrapedAt": "2026-04-29T06:15:00+09:00",
+  "category": "Paper",
+  "books": [
+    {
+      "rank": 1,
+      "asin": "PAPER000001",
+      "title": "サンプル紙の本 1",
+      "author": "サンプル著者B",
+      "category": "総合",
+      "image": "https://m.media-amazon.com/images/I/81OmAas48hL._SY425_.jpg",
+      "rating": 4.0,
+      "affiliateUrl": "https://www.amazon.co.jp/dp/PAPER000001?tag=yomirank-22"
+    }
+  ]
+}
