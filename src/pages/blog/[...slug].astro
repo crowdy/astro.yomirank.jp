@@ -1,0 +1,98 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArticleHeader from '../../components/ArticleHeader.astro';
+import BookList from '../../components/BookList.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
+import ArticleNav from '../../components/ArticleNav.astro';
+import { renderRuby } from '../../utils/render-ruby';
+import '../../styles/article.css';
+import '../../styles/article-ruby.css';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  const paths: Array<{
+    params: { slug: string };
+    props: { entry: CollectionEntry<'blog'>; variant: 'normal' | 'ruby' };
+  }> = [];
+
+  for (const entry of posts) {
+    const d = entry.data.date;
+    const yyyy = d.getFullYear();
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const dd = String(d.getDate()).padStart(2, '0');
+    const base = `${yyyy}/${mm}/${dd}/${entry.data.slug}`;
+
+    paths.push({ params: { slug: base }, props: { entry, variant: 'normal' } });
+
+    if (entry.data.ruby && entry.data.ruby.trim().length > 0) {
+      paths.push({
+        params: { slug: `${yyyy}/${mm}/${dd}/ruby/${entry.data.slug}` },
+        props: { entry, variant: 'ruby' },
+      });
+    }
+  }
+  return paths;
+}
+
+interface Props { entry: CollectionEntry<'blog'>; variant: 'normal' | 'ruby'; }
+const { entry, variant } = Astro.props;
+const { Content } = await render(entry);
+
+const d = entry.data.date;
+const yyyy = d.getFullYear();
+const mm = String(d.getMonth() + 1).padStart(2, '0');
+const dd = String(d.getDate()).padStart(2, '0');
+const base = `${yyyy}/${mm}/${dd}/${entry.data.slug}`;
+
+const canonicalUrl = variant === 'normal'
+  ? `https://yomirank.jp/blog/${base}/`
+  : `https://yomirank.jp/blog/${yyyy}/${mm}/${dd}/ruby/${entry.data.slug}/`;
+
+const rubyHref = variant === 'normal' && entry.data.ruby
+  ? `/blog/${yyyy}/${mm}/${dd}/ruby/${entry.data.slug}/`
+  : undefined;
+
+function renderRubyParagraphs(text: string): string[] {
+  return text.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+}
+const rubyParas = variant === 'ruby' ? renderRubyParagraphs(entry.data.ruby) : [];
+---
+
+<Base
+  title={entry.data.title}
+  description={entry.data.description}
+  ogImage={entry.data.ogImage}
+  canonicalUrl={canonicalUrl}
+  bodyClass={variant === 'ruby' ? 'with-ruby' : undefined}
+>
+  <div class="page-shell">
+    <article class="article-container">
+      <ArticleHeader
+        title={entry.data.title}
+        date={entry.data.date}
+        newsTitle={entry.data.news?.title}
+      />
+
+      <div class="article-content">
+        {variant === 'normal' ? (
+          <Content />
+        ) : (
+          rubyParas.map((p) => <p set:html={renderRuby(p)} />)
+        )}
+      </div>
+
+      <BookList books={entry.data.books} />
+
+      {entry.data.news && (
+        <div class="news-source">
+          📰 参照元: <a href={entry.data.news.url} target="_blank" rel="noopener noreferrer">{entry.data.news.title}</a>
+        </div>
+      )}
+
+      <ShareButtons url={canonicalUrl} title={entry.data.title} />
+
+      <ArticleNav rubyHref={rubyHref} />
+    </article>
+  </div>
+</Base>
