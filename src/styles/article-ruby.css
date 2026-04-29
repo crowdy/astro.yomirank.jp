@@ -1,0 +1,147 @@
+/**
+ * article-ruby.css
+ * yomirank.jp - Ruby (furigana) version specific styles
+ */
+
+/* Ruby text styling */
+ruby {
+    ruby-align: center;
+}
+
+ruby rt {
+    font-size: 0.5em;
+    color: var(--text-gray);
+    font-weight: normal;
+}
+
+/* Larger ruby for article titles */
+.article-title ruby rt {
+    font-size: 0.45em;
+}
+
+/* Ruby in content - slightly larger for readability */
+.article-content ruby rt {
+    font-size: 0.55em;
+    color: var(--text-light);
+}
+
+/* Ruby in book titles */
+.book-title ruby rt {
+    font-size: 0.5em;
+}
+
+/* Learning mode indicator */
+.learning-mode-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75em;
+    font-weight: 700;
+    margin-left: var(--spacing-sm);
+    vertical-align: middle;
+}
+
+/* Ruby version header styling */
+.ruby-header-note {
+    background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+    border: 1px solid #FFB74D;
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    font-size: 0.9em;
+    color: #E65100;
+}
+
+.ruby-header-note::before {
+    content: "📖 ";
+}
+
+/* Adjust line height for ruby text */
+.article-content {
+    line-height: 2.2;
+}
+
+.article-title {
+    line-height: 1.6;
+}
+
+/* Hover effect to highlight ruby */
+.article-content p:hover ruby rt {
+    color: var(--primary-blue);
+}
+
+/* Version toggle - highlight current version */
+.version-toggle .current {
+    background: var(--primary-blue);
+    color: white;
+    cursor: default;
+}
+
+.version-toggle .current:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Mobile adjustments for ruby */
+@media (max-width: 768px) {
+    ruby rt {
+        font-size: 0.45em;
+    }
+
+    .article-content {
+        line-height: 2.4;
+    }
+
+    .article-content ruby rt {
+        font-size: 0.5em;
+    }
+
+    .learning-mode-badge {
+        display: block;
+        margin-left: 0;
+        margin-top: var(--spacing-sm);
+        text-align: center;
+    }
+}
+
+/* 읽기 연습 게임 링크 스타일 */
+.version-toggle {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.version-toggle a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.version-toggle .game-link {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.version-toggle .game-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Print styles - hide ruby for cleaner printing */
+@media print {
+    ruby rt {
+        display: none;
+    }
+
+    .learning-mode-badge,
+    .ruby-header-note {
+        display: none;
+    }
+}
