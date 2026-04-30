@@ -1,31 +1,1407 @@
 ---
-import Base from '../layouts/Base.astro';
-import BookList from '../components/BookList.astro';
-import data from '../data/bestsellers-latest.json';
+import rawData from '../data/bestsellers-latest.json';
 
-const books = (data.books ?? []).map((b: any) => ({
-  rank: b.rank,
-  asin: b.asin,
-  title: b.title,
-  author: b.author,
-  category: b.category,
-  image: b.image,
-  rating: b.rating,
-  point: '',
-  affiliateUrl: b.affiliateUrl,
-}));
-const fmt = new Intl.DateTimeFormat('ja-JP', {
-  year: 'numeric', month: 'long', day: 'numeric',
-  hour: '2-digit', minute: '2-digit',
-  timeZone: 'Asia/Tokyo',
-});
-const scrapedAt = data.scrapedAt ? fmt.format(new Date(data.scrapedAt)) : '';
+// Normalize data: original expects { metadata: { scrapedAtJST }, categories: { [name]: { books: [] } } }
+// Our dummy JSON has { scrapedAt, category, books: [] }
+// Build normalized shape defensively
+const excludeCategories = ['タレント写真集', 'ボーイズラブノベルス'];
+
+let normalizedData: { metadata: { scrapedAtJST: string }, categories: Record<string, { books: any[] }> };
+
+const anyData = rawData as any;
+
+if (anyData.categories && typeof anyData.categories === 'object') {
+  // Already correct shape — filter excluded categories
+  const filteredCategories: Record<string, { books: any[] }> = {};
+  Object.entries(anyData.categories as Record<string, { books: any[] }>).forEach(([name, cat]) => {
+    if (!excludeCategories.includes(name)) {
+      filteredCategories[name] = cat;
+    }
+  });
+  normalizedData = {
+    metadata: { scrapedAtJST: anyData.metadata?.scrapedAtJST ?? anyData.scrapedAt ?? '' },
+    categories: filteredCategories,
+  };
+} else if (Array.isArray(anyData.books)) {
+  // Flat shape — group by category field, or use a single "Kindle本" group
+  const catMap: Record<string, { books: any[] }> = {};
+  (anyData.books as any[]).forEach((book: any) => {
+    const catName = book.category || 'Kindle本';
+    if (!catMap[catName]) catMap[catName] = { books: [] };
+    catMap[catName].books.push({
+      rank: book.rank,
+      asin: book.asin,
+      title: book.title,
+      author: book.author,
+      category: book.category,
+      imageUrl: book.image ?? book.imageUrl ?? '',
+      rating: book.rating,
+      price: book.price ?? '',
+      reviews: book.reviews ?? '',
+      link: book.affiliateUrl ?? book.link ?? '',
+    });
+  });
+  // Filter excluded
+  const filteredCategories: Record<string, { books: any[] }> = {};
+  Object.entries(catMap).forEach(([name, cat]) => {
+    if (!excludeCategories.includes(name)) {
+      filteredCategories[name] = cat;
+    }
+  });
+  normalizedData = {
+    metadata: { scrapedAtJST: anyData.scrapedAt ?? '' },
+    categories: filteredCategories,
+  };
+} else {
+  normalizedData = { metadata: { scrapedAtJST: '' }, categories: {} };
+}
+
+const jsonPayload = JSON.stringify(normalizedData);
 ---
 
-<Base title="Kindle ベストセラー">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yomirank.jp: ランキング | 人気の電子書籍をカテゴリ別に紹介</title>
+  <meta name="description" content="人気の電子書籍をカテゴリ別に紹介。最新のランキング情報と書籍レビューで、あなたにぴったりの本を見つけましょう。">
+  <meta name="keywords" content="Kindle,電子書籍,ランキング,カテゴリ,読書,おすすめ本">
+
+  <meta property="og:title" content="yomirank.jp: ランキング | 人気の電子書籍をカテゴリ別に紹介">
+  <meta property="og:description" content="人気の電子書籍をカテゴリ別に紹介。最新のランキング情報と書籍レビューで、あなたにぴったりの本を見つけましょう。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yomirank.jp/ranking/">
+  <meta property="og:image" content="https://yomirank.jp/favicon.svg">
+  <meta property="og:site_name" content="yomirank.jp">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="yomirank.jp: ランキング | 人気の電子書籍をカテゴリ別に紹介">
+  <meta name="twitter:description" content="人気の電子書籍をカテゴリ別に紹介。最新のランキング情報と書籍レビューで、あなたにぴったりの本を見つけましょう。">
+  <meta name="twitter:image" content="https://yomirank.jp/favicon.svg">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="yomirank">
+
+  <link rel="canonical" href="https://yomirank.jp/ranking/">
+
+  <style is:global>
+        :root {
+            --primary-dark: #0F2638;
+            --primary-blue: #1C3F5E;
+            --primary-light: #2C5F7E;
+            --accent-orange: #FF9900;
+            --accent-gold: #FFD700;
+            --bg-white: #FFFFFF;
+            --bg-gray-light: #F5F5F5;
+            --bg-gray: #F8F9FA;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --text-light: #6C757D;
+            --border-light: #E9ECEF;
+
+            --spacing-xs: 4px;
+            --spacing-sm: 8px;
+            --spacing-md: 12px;
+            --spacing-lg: 16px;
+            --spacing-xl: 24px;
+            --spacing-xxl: 32px;
+
+            --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 8px 18px rgba(15, 38, 56, 0.12);
+            --shadow-lg: 0 12px 30px rgba(15, 38, 56, 0.22);
+
+            --header-height: 60px;
+            --sidebar-width: 320px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: clamp(14px, 1.3vw + 10px, 16px);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: radial-gradient(circle at top, #21466A 0, #0F2638 40%, #050B10 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: rgba(15, 38, 56, 0.95);
+            backdrop-filter: blur(12px);
+            color: white;
+            height: var(--header-height);
+            box-shadow: 0 1px 0 rgba(255,255,255,0.04);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            font-size: clamp(1.1rem, 2.4vw, 1.3rem);
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+
+        .nav-badge {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: 0.75em;
+            font-weight: 700;
+        }
+
+        .nav-search {
+            flex: 1;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-form {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 8px 40px 8px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 0.85em;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .search-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            padding: 6px 10px;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.2s ease;
+        }
+
+        .search-btn:hover {
+            color: white;
+        }
+
+        .search-btn svg {
+            width: 18px;
+            height: 18px;
+            display: block;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            flex-shrink: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9em;
+            padding: 8px 12px;
+            border-radius: 999px;
+            transition: all 0.2s ease;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        .nav-link.active {
+            color: white;
+            font-weight: 700;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+            margin-left: 10px;
+            border-radius: 999px;
+            transition: background 0.2s ease;
+        }
+
+        .nav-toggle:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #ffffff;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+            border-radius: 999px;
+        }
+
+        .nav-toggle.open span:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+
+        .nav-toggle.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.open span:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+
+        .page-shell {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-xxl);
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        .sidebar,
+        .content {
+            background: rgba(255,255,255,0.98);
+            border-radius: 18px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .sidebar {
+            padding: var(--spacing-lg);
+            height: fit-content;
+            position: sticky;
+            top: calc(var(--header-height) + var(--spacing-lg));
+            max-height: calc(100vh - var(--header-height) - var(--spacing-lg) * 2);
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-md);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: var(--spacing-sm);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .sidebar-stats {
+            font-size: 0.8em;
+            color: var(--text-light);
+        }
+
+        .category-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .category-item {
+            margin: 0;
+        }
+
+        .category-label {
+            padding: 8px 10px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.18s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85em;
+        }
+
+        .category-label:hover {
+            background: var(--bg-gray-light);
+        }
+
+        .category-label.active {
+            background: var(--primary-blue);
+            color: white;
+            font-weight: 600;
+        }
+
+        .category-count {
+            font-size: 0.8em;
+            opacity: 0.85;
+            background: rgba(0,0,0,0.06);
+            padding: 2px 10px;
+            border-radius: 999px;
+        }
+
+        .category-label.active .category-count {
+            background: rgba(255,255,255,0.18);
+        }
+
+        .category-name {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .content {
+            padding: var(--spacing-xl);
+            min-height: 560px;
+        }
+
+        .content-header {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .content h1 {
+            color: var(--primary-blue);
+            font-size: clamp(1.25rem, 3.5vw, 1.8rem);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+        }
+
+        .meta-info {
+            font-size: 0.8em;
+            color: var(--text-light);
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .meta-info div {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: var(--spacing-xxl);
+            color: var(--text-gray);
+            font-size: 0.9em;
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+
+        .list-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .list-item {
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: var(--spacing-md);
+            transition: all 0.18s ease;
+            cursor: pointer;
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        .list-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+            border-color: var(--primary-blue);
+        }
+
+        .item-rank {
+            flex-shrink: 0;
+            width: 46px;
+            height: 46px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+            color: white;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+
+        .item-rank.top3 {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            box-shadow: 0 0 14px rgba(255, 215, 0, 0.35);
+        }
+
+        .item-image {
+            flex-shrink: 0;
+            width: 90px;
+        }
+
+        .item-image img {
+            width: 100%;
+            height: 135px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .item-content {
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .item-category-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 999px;
+            font-size: 0.7em;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+        }
+
+        .item-title {
+            color: var(--primary-blue);
+            font-size: clamp(1rem, 2.4vw, 1.15rem);
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .item-author {
+            color: var(--text-gray);
+            margin-bottom: 6px;
+            font-size: 0.85em;
+        }
+
+        .item-description {
+            color: var(--text-gray);
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            line-height: 1.5;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(147, 197, 253, 0.08));
+            border-left: 3px solid var(--primary-blue);
+            border-radius: 6px;
+        }
+
+        .item-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            font-size: 0.75em;
+            color: var(--text-light);
+            flex-wrap: wrap;
+        }
+
+        .meta-rating {
+            color: var(--accent-orange);
+            font-weight: 600;
+        }
+
+        .footer {
+            background: transparent;
+            color: rgba(255,255,255,0.7);
+            padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0.8em;
+        }
+
+        .footer-links {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin: 0 var(--spacing-md);
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .affiliate-disclosure {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            font-size: 0.85em;
+            line-height: 1.6;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .footer-social a:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.3);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .footer-social svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .footer-social a.social-note:hover {
+            background: rgba(65, 197, 143, 0.2);
+            border-color: rgba(65, 197, 143, 0.5);
+        }
+        .footer-social a.social-x:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .category-dropdown {
+            display: none;
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 0.95em;
+            font-weight: 500;
+            border: 2px solid var(--primary-blue);
+            border-radius: 14px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8FBFF 100%);
+            color: var(--primary-blue);
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(28, 63, 94, 0.08);
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%231C3F5E' d='M4.427 6.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 6H4.604a.25.25 0 00-.177.427z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 40px;
+        }
+
+        .category-dropdown:hover {
+            border-color: var(--primary-light);
+            box-shadow: 0 6px 16px rgba(28, 63, 94, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .category-dropdown:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 4px rgba(28, 63, 94, 0.12), 0 6px 16px rgba(28, 63, 94, 0.15);
+        }
+
+        .category-dropdown:active {
+            transform: translateY(0);
+        }
+
+        .category-dropdown option {
+            padding: 12px;
+            font-size: 1em;
+            background: white;
+            color: var(--text-dark);
+        }
+
+        .category-dropdown option:checked {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        @media (max-width: 1024px) {
+            .page-shell {
+                padding: var(--spacing-lg);
+            }
+
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+                max-height: none;
+                margin-bottom: var(--spacing-lg);
+            }
+
+            .category-list {
+                display: none;
+            }
+
+            .category-dropdown {
+                display: block;
+            }
+
+            .content {
+                padding: var(--spacing-lg);
+            }
+
+            .list-item {
+                padding: var(--spacing-md);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: clamp(13px, 4vw, 15px);
+            }
+
+            .header {
+                height: auto;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 8px 12px;
+                row-gap: 6px;
+            }
+
+            .nav-left {
+                order: 1;
+            }
+
+            .nav-toggle {
+                display: block;
+                order: 2;
+            }
+
+            .nav-search {
+                order: 3;
+                max-width: 100%;
+                width: 100%;
+                padding-top: 8px;
+                border-top: 1px solid rgba(255, 255, 255, 0.16);
+            }
+
+            .nav-right {
+                order: 4;
+                width: 100%;
+                justify-content: center;
+                padding-top: 6px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: row;
+                justify-content: center;
+                gap: var(--spacing-sm);
+                width: 100%;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-link {
+                padding: 6px 16px;
+                font-size: 0.9em;
+                flex: 0 1 auto;
+            }
+
+            .page-shell {
+                padding: var(--spacing-md) var(--spacing-sm) var(--spacing-xl);
+            }
+
+            .main-container {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+
+            .sidebar,
+            .content {
+                border-radius: 16px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            }
+
+            .sidebar {
+                padding: var(--spacing-md);
+            }
+
+            .category-label {
+                padding: 7px 8px;
+                border-radius: 10px;
+            }
+
+            .content {
+                padding: var(--spacing-md);
+            }
+
+            .content h1 {
+                font-size: clamp(1.1rem, 4.2vw, 1.4rem);
+            }
+
+            .meta-info {
+                font-size: 0.78em;
+            }
+
+            .list-item {
+                flex-direction: row;
+                align-items: flex-start;
+                padding: var(--spacing-md);
+            }
+
+            .item-image {
+                width: 70px;
+            }
+
+            .item-image img {
+                height: 110px;
+            }
+
+            .item-rank {
+                width: 40px;
+                height: 40px;
+                font-size: 1em;
+            }
+
+            .item-meta {
+                font-size: 0.72em;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .list-item {
+                position: relative;
+                padding: 12px;
+                gap: 12px;
+            }
+
+            .item-image {
+                width: 120px !important;
+            }
+
+            .item-image img {
+                height: 170px !important;
+            }
+
+            .item-rank {
+                position: absolute;
+                top: 10px;
+                left: 16px;
+                z-index: 5;
+                width: 32px !important;
+                height: 32px !important;
+                font-size: 0.85em !important;
+                border-radius: 999px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+            }
+
+            .item-rank.top3 {
+                width: 34px !important;
+                height: 34px !important;
+            }
+
+            .item-content {
+                padding-left: 4px;
+            }
+        }
+
+        @media (max-width: 340px) {
+            .item-image {
+                width: 105px !important;
+            }
+
+            .item-image img {
+                height: 155px !important;
+            }
+        }
+
+        .search-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: var(--spacing-xl);
+        }
+
+        .search-overlay.active {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: calc(var(--header-height) + var(--spacing-xl));
+        }
+
+        .search-results-container {
+            background: white;
+            border-radius: 16px;
+            max-width: 700px;
+            width: 100%;
+            max-height: calc(100vh - var(--header-height) - var(--spacing-xxl) * 2);
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .search-results-header {
+            padding: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: white;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .search-results-title {
+            color: var(--primary-blue);
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .search-close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: var(--text-gray);
+            padding: 4px 8px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .search-close-btn:hover {
+            background: var(--bg-gray-light);
+            color: var(--text-dark);
+        }
+
+        .search-results-list {
+            padding: var(--spacing-md);
+        }
+
+        .search-result-item {
+            padding: var(--spacing-md);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            margin-bottom: var(--spacing-sm);
+            border: 1px solid var(--border-light);
+        }
+
+        .search-result-item:hover {
+            background: var(--bg-gray-light);
+            border-color: var(--primary-blue);
+        }
+
+        .search-result-title {
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .search-result-category {
+            font-size: 0.75em;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+
+        .search-result-author {
+            font-size: 0.85em;
+            color: var(--text-gray);
+        }
+
+        .search-no-results {
+            text-align: center;
+            padding: var(--spacing-xxl);
+            color: var(--text-gray);
+        }
+
+        .search-result-item mark {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container">
+      <div class="nav-left">
+        <a href="/" style="text-decoration: none; color: inherit;"><span class="logo-text">よみランク</span></a>
+        <span class="nav-badge">読書ガイド</span>
+      </div>
+      <div class="nav-search">
+        <form class="search-form" id="search-form">
+          <input type="text" name="q" class="search-input" placeholder="書籍を検索..." aria-label="書籍を検索" id="search-input">
+          <button type="submit" class="search-btn" aria-label="検索">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+      <button class="nav-toggle" aria-label="メニューを開閉" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="/" class="nav-link">時事と本</a>
+          <a href="/ranking/" class="nav-link active">電子書籍</a>
+          <a href="/paper-ranking/" class="nav-link">紙の本</a>
+          <a href="/japanese-study/" class="nav-link">学習用</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
   <div class="page-shell">
-    <h1>Kindle ベストセラー</h1>
-    {scrapedAt && <p class="updated-at">最終更新: {scrapedAt}</p>}
-    <BookList books={books} heading="" />
+    <div class="main-container">
+      <aside class="sidebar">
+        <h2>
+          <span>カテゴリ</span>
+          <span class="sidebar-stats" id="header-stats">...</span>
+        </h2>
+        <select class="category-dropdown" id="category-dropdown" aria-label="カテゴリを選択">
+          <option value="">カテゴリを選択...</option>
+        </select>
+        <ul class="category-list" id="category-list">
+        </ul>
+      </aside>
+
+      <main class="content">
+        <div class="content-header">
+          <h1 id="current-category-title"></h1>
+          <div class="meta-info">
+            <div id="scrape-time">収集時刻: -</div>
+            <div id="item-count">書籍数: -</div>
+          </div>
+        </div>
+
+        <div id="loading" class="loading"></div>
+        <div id="list-container" class="list-container" style="display: none;"></div>
+      </main>
+    </div>
   </div>
-</Base>
+
+  <div class="search-overlay" id="search-overlay" onclick="if(event.target === this) closeSearchResults()">
+    <div class="search-results-container">
+      <div class="search-results-header">
+        <span class="search-results-title" id="search-results-title">検索結果</span>
+        <button class="search-close-btn" onclick="closeSearchResults()">&times;</button>
+      </div>
+      <div class="search-results-list" id="search-results-list"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="affiliate-disclosure">
+        当サイトはAmazon.co.jpアソシエイトに参加しています。<br>
+        当サイト内のリンクから購入された場合、当サイトは紹介料を得ることがあります。
+      </div>
+      <div class="footer-social">
+        <a href="https://note.com/yomirank_jp" target="_blank" rel="noopener noreferrer" class="social-note">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.441 16.892c-2.102.144-2.831-.333-3.631-1.078-1.333-1.262-2.393-1.529-4.141-1.529l-.206.007V9.996l.207.006c1.829 0 3.092-.282 4.141-1.528.8-.746 1.529-1.223 3.631-1.078 1.618.111 2.558.988 2.558 2.681v3.134c0 1.693-.94 2.57-2.559 2.681z"/></svg>
+          note
+        </a>
+        <a href="https://x.com/yomirank" target="_blank" rel="noopener noreferrer" class="social-x">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="/about/">運営者情報</a>
+        <a href="/contact/">お問い合わせ</a>
+        <a href="/privacy-policy/">プライバシーポリシー</a>
+      </div>
+      <p>&copy; 2025 yomirank.jp. Data source: Amazon.co.jp</p>
+    </div>
+  </footer>
+
+  <script type="application/json" id="ranking-data" set:html={jsonPayload}></script>
+
+  <script is:inline>
+    var allBooksData = {};
+    var currentCategory = 'Kindle本';
+    var bookDescriptions = {};
+
+    var excludeCategories = ['タレント写真集', 'ボーイズラブノベルス'];
+
+    function addAffiliateTag(link) {
+      if (!link) return '#';
+      return link.includes('?') ? link + '&tag=yomirank-22' : link + '?tag=yomirank-22';
+    }
+
+    function initBestsellers() {
+      try {
+        var el = document.getElementById('ranking-data');
+        if (!el) return;
+        var data = JSON.parse(el.textContent || '{}');
+
+        if (data.metadata && data.metadata.scrapedAtJST) {
+          document.getElementById('scrape-time').textContent =
+            '収集時刻: ' + data.metadata.scrapedAtJST;
+        }
+
+        allBooksData = {};
+        var categories = data.categories || {};
+        Object.keys(categories).forEach(function(name) {
+          if (!excludeCategories.includes(name)) {
+            allBooksData[name] = categories[name];
+          }
+        });
+
+        var totalBooks = 0;
+        Object.values(allBooksData).forEach(function(category) {
+          totalBooks += (category.books || []).length;
+        });
+
+        document.getElementById('header-stats').textContent =
+          totalBooks + '冊 ' + Object.keys(allBooksData).length + 'カテゴリ';
+
+        buildCategoryList();
+
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('list-container').style.display = 'flex';
+
+        var firstCategory = Object.keys(allBooksData)[0] || 'Kindle本';
+        selectCategory(firstCategory, false);
+
+      } catch (error) {
+        console.error('データ初期化エラー:', error);
+        document.getElementById('loading').textContent = 'データの読み込みに失敗しました。';
+      }
+    }
+
+    function buildCategoryList() {
+      var listContainer = document.getElementById('category-list');
+      var dropdownContainer = document.getElementById('category-dropdown');
+      var categories = Object.keys(allBooksData);
+
+      categories.forEach(function(categoryName) {
+        var categoryData = allBooksData[categoryName];
+        var count = (categoryData.books || []).length;
+
+        var li = document.createElement('li');
+        li.className = 'category-item';
+
+        var label = document.createElement('div');
+        label.className = 'category-label';
+        label.dataset.category = categoryName;
+        label.innerHTML =
+          '<span class="category-name">' + categoryName + '</span>' +
+          '<span class="category-count">' + count + '</span>';
+
+        label.addEventListener('click', function() { selectCategory(categoryName); });
+
+        li.appendChild(label);
+        listContainer.appendChild(li);
+
+        var option = document.createElement('option');
+        option.value = categoryName;
+        option.textContent = categoryName + ' (' + count + ')';
+        dropdownContainer.appendChild(option);
+      });
+
+      dropdownContainer.addEventListener('change', function(e) {
+        if (e.target.value) {
+          selectCategory(e.target.value);
+        }
+      });
+    }
+
+    function selectCategory(category, shouldScroll) {
+      if (shouldScroll === undefined) shouldScroll = true;
+      currentCategory = category;
+
+      document.querySelectorAll('.category-label').forEach(function(label) {
+        label.classList.remove('active');
+      });
+
+      var selectedLabel = document.querySelector('[data-category="' + category + '"]');
+      if (selectedLabel) {
+        selectedLabel.classList.add('active');
+      }
+
+      var dropdown = document.getElementById('category-dropdown');
+      if (dropdown) {
+        dropdown.value = category;
+      }
+
+      document.getElementById('current-category-title').textContent = category;
+
+      renderBooks(category);
+
+      if (shouldScroll) {
+        document.querySelector('.content').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function renderBooks(category) {
+      var container = document.getElementById('list-container');
+      var itemCount = document.getElementById('item-count');
+
+      var categoryData = allBooksData[category];
+      var books = categoryData ? (categoryData.books || []) : [];
+
+      if (books.length === 0) {
+        container.innerHTML = '<p style="text-align: center; color: var(--text-gray);">データがありません。</p>';
+        itemCount.textContent = '書籍数: 0';
+        return;
+      }
+
+      books.sort(function(a, b) { return a.rank - b.rank; });
+
+      itemCount.textContent = '書籍数: ' + books.length;
+
+      container.innerHTML = books.map(function(book) {
+        var affiliateLink = addAffiliateTag(book.link || book.affiliateUrl || '');
+        var imageHtml = book.imageUrl ? (
+          '<div class="item-image">' +
+          '<img src="' + book.imageUrl + '" alt="' + (book.title || '') + '" loading="lazy"' +
+          ' onerror="this.parentElement.style.display=\'none\'">' +
+          '</div>'
+        ) : '';
+        var authorHtml = book.author ? '<div class="item-author">' + book.author + '</div>' : '';
+        var descHtml = (book.asin && bookDescriptions[book.asin]) ?
+          '<div class="item-description">' + bookDescriptions[book.asin] + '</div>' : '';
+        var ratingHtml = book.rating ? '<span class="meta-rating">' + book.rating + '</span>' : '';
+        var priceHtml = book.price ? '<span>価格: ' + book.price + '</span>' : '';
+        var reviewsHtml = book.reviews ? '<span>予定ポイント: ' + book.reviews + '</span>' : '';
+        var asinHtml = book.asin ? '<span>ASIN: ' + book.asin + '</span>' : '';
+
+        return '<article class="list-item" onclick="window.open(\'' + affiliateLink + '\', \'_blank\')">' +
+          '<div class="item-rank ' + (book.rank <= 3 ? 'top3' : '') + '">' + (book.rank || '-') + '</div>' +
+          imageHtml +
+          '<div class="item-content">' +
+          '<span class="item-category-badge">' + (book.category || 'BEST') + '</span>' +
+          '<h3 class="item-title">' + (book.title || '(タイトル不明)') + '</h3>' +
+          authorHtml +
+          descHtml +
+          '<div class="item-meta">' + ratingHtml + priceHtml + reviewsHtml + asinHtml + '</div>' +
+          '</div>' +
+          '</article>';
+      }).join('');
+    }
+
+    function getCategoryFromURL() {
+      var params = new URLSearchParams(window.location.search);
+      return params.get('category');
+    }
+
+    function getSearchQueryFromURL() {
+      var params = new URLSearchParams(window.location.search);
+      return params.get('q');
+    }
+
+    function handleSearch(event) {
+      event.preventDefault();
+      var query = document.getElementById('search-input').value.trim();
+      if (query.length < 2) {
+        alert('2文字以上入力してください');
+        return false;
+      }
+      performSearch(query);
+      return false;
+    }
+
+    function performSearch(query) {
+      var results = [];
+      var lowerQuery = query.toLowerCase();
+
+      Object.entries(allBooksData).forEach(function(entry) {
+        var categoryName = entry[0];
+        var categoryData = entry[1];
+        (categoryData.books || []).forEach(function(book) {
+          var matchFound = false;
+
+          if (book.title && book.title.toLowerCase().includes(lowerQuery)) {
+            matchFound = true;
+          }
+
+          if (!matchFound && book.author && book.author.toLowerCase().includes(lowerQuery)) {
+            matchFound = true;
+          }
+
+          if (matchFound) {
+            results.push({
+              category: categoryName,
+              title: highlightQuery(book.title || '(タイトル不明)', query),
+              author: book.author ? highlightQuery(book.author, query) : '',
+              link: book.link || book.affiliateUrl || '#',
+              imageUrl: book.imageUrl || ''
+            });
+          }
+        });
+      });
+
+      showSearchResults(results, query);
+    }
+
+    function highlightQuery(text, query) {
+      var regex = new RegExp('(' + escapeRegex(query) + ')', 'gi');
+      return text.replace(regex, '<mark>$1</mark>');
+    }
+
+    function escapeRegex(string) {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function showSearchResults(results, query) {
+      var overlay = document.getElementById('search-overlay');
+      var resultsList = document.getElementById('search-results-list');
+      var title = document.getElementById('search-results-title');
+
+      title.textContent = '「' + query + '」の検索結果 (' + results.length + '件)';
+
+      if (results.length === 0) {
+        resultsList.innerHTML = '<div class="search-no-results">該当する書籍が見つかりませんでした。</div>';
+      } else {
+        resultsList.innerHTML = results.map(function(result) {
+          return '<div class="search-result-item" onclick="window.open(\'' + addAffiliateTag(result.link) + '\', \'_blank\')">' +
+            '<div class="search-result-category">' + result.category + '</div>' +
+            '<div class="search-result-title">' + result.title + '</div>' +
+            (result.author ? '<div class="search-result-author">' + result.author + '</div>' : '') +
+            '</div>';
+        }).join('');
+      }
+
+      overlay.classList.add('active');
+    }
+
+    function closeSearchResults() {
+      document.getElementById('search-overlay').classList.remove('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      initBestsellers();
+
+      var categoryFromURL = getCategoryFromURL();
+      if (categoryFromURL && allBooksData[categoryFromURL]) {
+        selectCategory(categoryFromURL, false);
+      }
+
+      var searchQuery = getSearchQueryFromURL();
+      if (searchQuery) {
+        document.getElementById('search-input').value = searchQuery;
+        performSearch(searchQuery);
+      }
+
+      var searchForm = document.getElementById('search-form');
+      if (searchForm) {
+        searchForm.addEventListener('submit', handleSearch);
+      }
+
+      var navToggle = document.querySelector('.nav-toggle');
+      var navLinks = document.querySelector('.nav-links');
+
+      if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+          var isOpen = navToggle.classList.toggle('open');
+          navLinks.classList.toggle('open');
+          navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeSearchResults();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
