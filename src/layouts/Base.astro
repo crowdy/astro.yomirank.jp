@@ -56,7 +56,7 @@ const url = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).href;
   {extraStylesheets.map((href) => <link rel="stylesheet" href={href} />)}
 </head>
 <body class={bodyClass}>
-  <Nav />
+  <slot name="nav"><Nav /></slot>
   <main><slot /></main>
   <Footer />
 </body>

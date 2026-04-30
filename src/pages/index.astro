@@ -57,6 +57,37 @@ const searchData = allPosts.map(p => ({
   title="yomirank.jp: ブログ記事 | 時事と本のおすすめ"
   description="時事ニュースに関連したおすすめのKindle本をAIがキュレーション。話題のトピックと関連書籍で知識を深めましょう。"
 >
+  <header slot="nav" class="header">
+    <nav class="nav-container">
+      <div class="nav-left">
+        <a href="/" style="text-decoration: none; color: inherit;">
+          <img src="/yomirank_logo.jpg" alt="よみランク" style="height: 40px; display: block;" />
+        </a>
+        <span class="nav-badge">読書ガイド</span>
+      </div>
+      <div class="nav-search">
+        <form class="search-form" id="search-form" action="/" method="get">
+          <input type="text" name="q" class="search-input" id="search-input" placeholder="記事を検索..." aria-label="記事を検索" />
+          <button type="submit" class="search-btn" aria-label="検索">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+      <button class="nav-toggle" aria-label="メニューを開閉" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="/" class="nav-link active">時事と本</a>
+          <a href="/ranking/" class="nav-link">電子書籍</a>
+          <a href="/paper-ranking/" class="nav-link">紙の本</a>
+          <a href="/japanese-study/" class="nav-link">学習用</a>
+        </div>
+      </div>
+    </nav>
+  </header>
   <div class="page-shell">
     <div class="main-container">
       <aside class="sidebar">
