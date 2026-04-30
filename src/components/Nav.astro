@@ -14,7 +14,7 @@ const { activeNav = 'home' } = Astro.props;
       <span class="nav-badge">読書ガイド</span>
     </div>
     <div class="nav-search">
-      <form class="search-form" id="search-form">
+      <form class="search-form" id="search-form" action="/" method="get">
         <input type="text" name="q" class="search-input" id="search-input" placeholder="記事を検索..." aria-label="記事を検索" />
         <button type="submit" class="search-btn" aria-label="検索">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

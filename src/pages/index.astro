@@ -334,6 +334,15 @@ const searchData = allPosts.map(p => ({
           closeSearchResults();
         }
       });
+
+      // If page loaded with ?q=foo (e.g. submitted from another page), run that search
+      var params = new URLSearchParams(window.location.search);
+      var initialQuery = params.get('q');
+      if (initialQuery && initialQuery.trim().length >= 2) {
+        var input = document.getElementById('search-input');
+        if (input) input.value = initialQuery;
+        performSearch(initialQuery.trim());
+      }
     });
   </script>
 
