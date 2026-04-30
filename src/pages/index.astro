@@ -1,38 +1,1350 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import bestsellersRaw from '../data/bestsellers-latest.json';
 
-const posts = (await getCollection('blog'))
+// Get latest 30 published articles
+const allPosts = (await getCollection('blog'))
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 30);
 
-function postUrl(p: typeof posts[number]) {
+// Build URL from post (using UTC date consistent with [...slug].astro)
+function postUrl(p: typeof allPosts[number]) {
   const d = p.data.date;
-  return `/blog/${d.getFullYear()}/${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}/${p.data.slug}/`;
+  return `/blog/${d.getUTCFullYear()}/${String(d.getUTCMonth() + 1).padStart(2, '0')}/${String(d.getUTCDate()).padStart(2, '0')}/${p.data.slug}/`;
 }
-const fmt = new Intl.DateTimeFormat('ja-JP', {
-  year: 'numeric', month: 'long', day: 'numeric',
-  hour: '2-digit', minute: '2-digit',
-  timeZone: 'Asia/Tokyo',
-});
+
+// Format date for display: "2026年3月10日(火) 16時01分" using JST
+function fmtDate(d: Date) {
+  const jstMs = d.getTime() + 9 * 60 * 60 * 1000;
+  const j = new Date(jstMs);
+  const wdj = ['日', '月', '火', '水', '木', '金', '土'][j.getUTCDay()];
+  return `${j.getUTCFullYear()}年${j.getUTCMonth() + 1}月${j.getUTCDate()}日(${wdj}) ${j.getUTCHours()}時${String(j.getUTCMinutes()).padStart(2, '0')}分`;
+}
+
+// Build sidebar categories from bestsellers JSON
+// Real shape: {categories: {name: {books: [...]}}}
+// Dummy shape: {scrapedAt, category, books: [...]}
+const excludeCategories = ['タレント写真集', 'ボーイズラブノベルス'];
+
+const data = bestsellersRaw as Record<string, unknown>;
+let categories: Array<{ name: string; count: number }> = [];
+if (data.categories && typeof data.categories === 'object' && !Array.isArray(data.categories)) {
+  // Real shape: categories is an object keyed by category name
+  categories = Object.entries(data.categories as Record<string, unknown>)
+    .filter(([name]) => !excludeCategories.includes(name))
+    .map(([name, catData]) => {
+      const count = Array.isArray((catData as Record<string, unknown>)?.books)
+        ? ((catData as Record<string, unknown>).books as unknown[]).length
+        : 0;
+      return { name, count };
+    });
+} // else: flat dummy data — render empty sidebar gracefully
+
+const totalBooks = categories.reduce((acc, c) => acc + c.count, 0);
+
+// Embed article data for client-side search
+const searchData = allPosts.map(p => ({
+  title: p.data.title,
+  url: postUrl(p),
+  theme: p.data.theme ?? '',
+  // Plain body paragraphs (split on blank lines)
+  content: p.body ? p.body.split(/\n\s*\n/).filter((s: string) => s.trim().length > 0) : [],
+}));
 ---
 
-<Base title="yomirank.jp - 時事ニュースと書籍を結ぶ読書ガイド">
+<Base
+  title="yomirank.jp: ブログ記事 | 時事と本のおすすめ"
+  description="時事ニュースに関連したおすすめのKindle本をAIがキュレーション。話題のトピックと関連書籍で知識を深めましょう。"
+>
   <div class="page-shell">
-    <h1 class="page-title">最新の記事</h1>
-    <ul class="post-list">
-      {posts.map((p) => (
-        <li class="post-list-item">
-          <a href={postUrl(p)}>
-            <div class="post-meta">
-              <span class="post-theme">{p.data.theme}</span>
-              <time>{fmt.format(p.data.date)}</time>
-            </div>
-            <h2 class="post-title">{p.data.title}</h2>
-            <p class="post-description">{p.data.description}</p>
-          </a>
-        </li>
-      ))}
-    </ul>
+    <div class="main-container">
+      <aside class="sidebar">
+        <h2>
+          <span>カテゴリ</span>
+          <span class="sidebar-stats" id="header-stats">
+            {categories.length > 0 ? `${totalBooks}冊 ${categories.length}カテゴリ` : '...'}
+          </span>
+        </h2>
+        <select class="category-dropdown" id="category-dropdown" aria-label="カテゴリを選択">
+          <option value="">カテゴリを選択...</option>
+          {categories.map(c => (
+            <option value={c.name}>{c.name} ({c.count})</option>
+          ))}
+        </select>
+        <ul class="category-list" id="category-list">
+          {categories.map(c => (
+            <li class="category-item">
+              <div class="category-label" data-category={c.name}>
+                <span class="category-name">{c.name}</span>
+                <span class="category-count">{c.count}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </aside>
+
+      <main class="content">
+        <article id="blog-article">
+          {allPosts.map((p, idx) => {
+            const paragraphs = p.body
+              ? p.body.split(/\n\s*\n/).filter((s: string) => s.trim().length > 0)
+              : [];
+            const previewParas = paragraphs.slice(0, 3);
+            const hasMore = paragraphs.length > 3;
+
+            return (
+              <article
+                class="blog-article-item"
+                data-index={idx}
+                style={idx > 0 ? 'margin-top: var(--spacing-xxl); padding-top: var(--spacing-xxl); border-top: 2px solid var(--border-light);' : ''}
+              >
+                <div class="blog-header">
+                  <h1 class="blog-title">
+                    <a href={postUrl(p)} style="color: inherit; text-decoration: none;">{p.data.title}</a>
+                  </h1>
+                  <div class="blog-meta">
+                    <span>📅 {fmtDate(p.data.date)}</span>
+                    <span>✏️ 編集部</span>
+                    {p.data.theme && <span>🏷️ {p.data.theme}</span>}
+                  </div>
+                </div>
+
+                <div class="blog-content">
+                  {previewParas.map((para: string, pIdx: number) => {
+                    let text = para.trim();
+                    if (pIdx === 2 && hasMore && text.length > 150) {
+                      text = text.slice(0, 150) + '...';
+                    }
+                    return <p>{text}</p>;
+                  })}
+                  <div class="read-more-container">
+                    <a href={postUrl(p)} class="read-more-link">... もっと読む →</a>
+                  </div>
+                </div>
+
+                {p.data.news && p.data.news.title && (
+                  <div class="news-source" style="margin-top: var(--spacing-xl); padding-top: var(--spacing-md); border-top: 1px solid var(--border-light); font-size: 0.8em; color: var(--text-light);">
+                    {p.data.news.url
+                      ? <>📰 参照元: <a href={p.data.news.url} target="_blank" rel="noopener noreferrer" style="color: var(--primary-blue); text-decoration: none;">{p.data.news.title}</a></>
+                      : <>📰 参照元: {p.data.news.title}</>
+                    }
+                  </div>
+                )}
+
+                {p.data.books && p.data.books.length > 0 && (
+                  <>
+                    <div class="recommendations-header">
+                      <h2>📚 おすすめの本</h2>
+                      <div class="recommendations-meta">
+                        <div>書籍数: {p.data.books.length}</div>
+                      </div>
+                    </div>
+                    <div class="list-container">
+                      {p.data.books.map(b => (
+                        <a
+                          href={b.affiliateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="list-item"
+                        >
+                          <div class={`item-rank${b.rank <= 3 ? ' top3' : ''}`}>{b.rank}</div>
+                          <div class="item-image">
+                            <img src={b.image} alt={b.title} loading="lazy" onerror="this.parentElement.style.display='none'" />
+                          </div>
+                          <div class="item-content">
+                            {b.category && <span class="item-category-badge">{b.category}</span>}
+                            <h3 class="item-title">{b.title}</h3>
+                            {b.author && <div class="item-author">{b.author}</div>}
+                            {b.rating !== undefined && (
+                              <div class="item-meta">
+                                <span class="meta-rating">⭐ {b.rating}</span>
+                              </div>
+                            )}
+                            {b.point && <div class="item-point">{b.point}</div>}
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </article>
+            );
+          })}
+        </article>
+      </main>
+    </div>
   </div>
+
+  <!-- 検索結果オーバーレイ -->
+  <div class="search-overlay" id="search-overlay" onclick="if(event.target === this) closeSearchResults()">
+    <div class="search-results-container">
+      <div class="search-results-header">
+        <span class="search-results-title" id="search-results-title">検索結果</span>
+        <button class="search-close-btn" onclick="closeSearchResults()">&times;</button>
+      </div>
+      <div class="search-results-list" id="search-results-list"></div>
+    </div>
+  </div>
+
+  <!-- Embed search data as JSON -->
+  <script type="application/json" id="search-data" set:html={JSON.stringify(searchData)} />
+
+  <script is:inline>
+    // Load article data from embedded JSON
+    var allArticlesData = JSON.parse(document.getElementById('search-data').textContent || '[]');
+
+    // Category navigation
+    document.querySelectorAll('.category-label[data-category]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var cat = el.getAttribute('data-category');
+        if (cat) {
+          window.location.href = '/ranking/?category=' + encodeURIComponent(cat);
+        }
+      });
+    });
+
+    var dropdownEl = document.getElementById('category-dropdown');
+    if (dropdownEl) {
+      dropdownEl.addEventListener('change', function(e) {
+        var val = e.target.value;
+        if (val) {
+          window.location.href = '/ranking/?category=' + encodeURIComponent(val);
+        }
+      });
+    }
+
+    // Search functions
+    function handleSearch(event) {
+      event.preventDefault();
+      var input = document.getElementById('search-input');
+      if (!input) return false;
+      var query = input.value.trim();
+      if (query.length < 2) {
+        alert('2文字以上入力してください');
+        return false;
+      }
+      performSearch(query);
+      return false;
+    }
+
+    function escapeRegex(s) {
+      return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function highlightQuery(text, q) {
+      return text.replace(new RegExp('(' + escapeRegex(q) + ')', 'gi'), '<mark>$1</mark>');
+    }
+
+    function performSearch(query) {
+      var results = [];
+      var lower = query.toLowerCase();
+
+      allArticlesData.forEach(function(article, index) {
+        var matchFound = false;
+        var excerpt = '';
+
+        // Title search
+        if (article.title.toLowerCase().includes(lower)) {
+          matchFound = true;
+          excerpt = article.title;
+        }
+
+        // Content search
+        if (!matchFound) {
+          for (var i = 0; i < article.content.length; i++) {
+            var para = article.content[i];
+            if (para.toLowerCase().includes(lower)) {
+              matchFound = true;
+              var matchIndex = para.toLowerCase().indexOf(lower);
+              var start = Math.max(0, matchIndex - 30);
+              var end = Math.min(para.length, matchIndex + query.length + 50);
+              excerpt = (start > 0 ? '...' : '') + para.substring(start, end) + (end < para.length ? '...' : '');
+              break;
+            }
+          }
+        }
+
+        // Theme search
+        if (!matchFound && article.theme && article.theme.toLowerCase().includes(lower)) {
+          matchFound = true;
+          excerpt = 'テーマ: ' + article.theme;
+        }
+
+        if (matchFound) {
+          results.push({
+            index: index,
+            title: article.title,
+            url: article.url,
+            excerpt: highlightQuery(excerpt, query)
+          });
+        }
+      });
+
+      showSearchResults(results, query);
+    }
+
+    function showSearchResults(results, query) {
+      var overlay = document.getElementById('search-overlay');
+      var list = document.getElementById('search-results-list');
+      var title = document.getElementById('search-results-title');
+
+      title.textContent = '「' + query + '」の検索結果 (' + results.length + '件)';
+
+      if (results.length === 0) {
+        list.innerHTML = '<div class="search-no-results">該当する記事が見つかりませんでした。</div>';
+      } else {
+        list.innerHTML = results.map(function(r) {
+          return '<div class="search-result-item" onclick="scrollToArticle(' + r.index + ')">' +
+            '<div class="search-result-title">' + r.title + '</div>' +
+            '<div class="search-result-excerpt">' + r.excerpt + '</div>' +
+            '</div>';
+        }).join('');
+      }
+
+      overlay.classList.add('active');
+    }
+
+    function closeSearchResults() {
+      var overlay = document.getElementById('search-overlay');
+      if (overlay) overlay.classList.remove('active');
+    }
+
+    function scrollToArticle(index) {
+      closeSearchResults();
+      var article = document.querySelector('.blog-article-item[data-index="' + index + '"]');
+      if (article) {
+        article.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        article.style.transition = 'background-color 0.3s ease';
+        article.style.backgroundColor = 'rgba(255, 215, 0, 0.1)';
+        setTimeout(function() {
+          article.style.backgroundColor = '';
+        }, 2000);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var searchForm = document.getElementById('search-form');
+      if (searchForm) {
+        searchForm.addEventListener('submit', handleSearch);
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeSearchResults();
+        }
+      });
+    });
+  </script>
+
+  <style is:global>
+    :root {
+        --primary-dark: #0F2638;
+        --primary-blue: #1C3F5E;
+        --primary-light: #2C5F7E;
+        --accent-orange: #FF9900;
+        --accent-gold: #FFD700;
+        --bg-white: #FFFFFF;
+        --bg-gray-light: #F5F5F5;
+        --bg-gray: #F8F9FA;
+        --text-dark: #333333;
+        --text-gray: #666666;
+        --text-light: #6C757D;
+        --border-light: #E9ECEF;
+
+        --spacing-xs: 4px;
+        --spacing-sm: 8px;
+        --spacing-md: 12px;
+        --spacing-lg: 16px;
+        --spacing-xl: 24px;
+        --spacing-xxl: 32px;
+
+        --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.06);
+        --shadow-md: 0 8px 18px rgba(15, 38, 56, 0.12);
+        --shadow-lg: 0 12px 30px rgba(15, 38, 56, 0.22);
+
+        --header-height: 60px;
+        --sidebar-width: 320px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: clamp(14px, 1.3vw + 10px, 16px);
+        line-height: 1.6;
+        color: var(--text-dark);
+        background: radial-gradient(circle at top, #21466A 0, #0F2638 40%, #050B10 100%);
+        min-height: 100vh;
+    }
+
+    .header {
+        background: rgba(15, 38, 56, 0.95);
+        backdrop-filter: blur(12px);
+        color: white;
+        height: var(--header-height);
+        box-shadow: 0 1px 0 rgba(255,255,255,0.04);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--spacing-lg);
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+    }
+
+    .logo-text {
+        font-size: clamp(1.1rem, 2.4vw, 1.3rem);
+        font-weight: 700;
+        letter-spacing: 0.03em;
+    }
+
+    .nav-badge {
+        background: var(--accent-gold);
+        color: var(--primary-dark);
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-size: 0.75em;
+        font-weight: 700;
+    }
+
+    /* 검색 폼 스타일 */
+    .nav-search {
+        flex: 1;
+        max-width: 400px;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 8px 40px 8px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        font-size: 0.85em;
+        font-family: inherit;
+        transition: all 0.2s ease;
+    }
+
+    .search-input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-input:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+    }
+
+    .search-btn {
+        position: absolute;
+        right: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        padding: 6px 10px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.2s ease;
+    }
+
+    .search-btn:hover {
+        color: white;
+    }
+
+    .search-btn svg {
+        width: 18px;
+        height: 18px;
+        display: block;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: var(--spacing-md);
+        align-items: center;
+    }
+
+    .nav-link {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: 0.9em;
+        padding: 8px 12px;
+        border-radius: 999px;
+        transition: all 0.2s ease;
+        font-weight: 400;
+        white-space: nowrap;
+    }
+
+    .nav-link:hover {
+        color: white;
+    }
+
+    .nav-link.active {
+        color: white;
+        font-weight: 700;
+    }
+
+    .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        margin-left: 10px;
+        border-radius: 999px;
+        transition: background 0.2s ease;
+    }
+
+    .nav-toggle:hover {
+        background: rgba(255,255,255,0.08);
+    }
+
+    .nav-toggle span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #ffffff;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+        border-radius: 999px;
+    }
+
+    .nav-toggle.open span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .nav-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.open span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .page-shell {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-xxl);
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    .sidebar,
+    .content {
+        background: rgba(255,255,255,0.98);
+        border-radius: 18px;
+        box-shadow: var(--shadow-md);
+    }
+
+    .sidebar {
+        padding: var(--spacing-lg);
+        height: fit-content;
+        position: sticky;
+        top: calc(var(--header-height) + var(--spacing-lg));
+        max-height: calc(100vh - var(--header-height) - var(--spacing-lg) * 2);
+        overflow-y: auto;
+    }
+
+    .sidebar h2 {
+        color: var(--primary-blue);
+        margin-bottom: var(--spacing-md);
+        font-size: 0.95rem;
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: var(--spacing-sm);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+    }
+
+    .sidebar-stats {
+        font-size: 0.8em;
+        color: var(--text-light);
+    }
+
+    .category-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .category-item {
+        margin: 0;
+    }
+
+    .category-label {
+        padding: 8px 10px;
+        cursor: pointer;
+        border-radius: 12px;
+        transition: all 0.18s ease;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85em;
+    }
+
+    .category-label:hover {
+        background: var(--bg-gray-light);
+    }
+
+    .category-label.active {
+        background: var(--primary-blue);
+        color: white;
+        font-weight: 600;
+    }
+
+    .category-count {
+        font-size: 0.8em;
+        opacity: 0.85;
+        background: rgba(0,0,0,0.06);
+        padding: 2px 10px;
+        border-radius: 999px;
+    }
+
+    .category-label.active .category-count {
+        background: rgba(255,255,255,0.18);
+    }
+
+    .category-name {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .content {
+        padding: var(--spacing-xl);
+        min-height: 560px;
+    }
+
+    .blog-header {
+        border-bottom: 2px solid var(--border-light);
+        padding-bottom: var(--spacing-md);
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .blog-title {
+        color: var(--primary-blue);
+        font-size: clamp(1.4rem, 3.5vw, 2rem);
+        margin-bottom: var(--spacing-sm);
+        line-height: 1.4;
+        font-weight: 700;
+    }
+
+    .blog-meta {
+        font-size: 0.85em;
+        color: var(--text-light);
+        display: flex;
+        gap: var(--spacing-md);
+        flex-wrap: wrap;
+    }
+
+    .blog-content {
+        font-size: 1em;
+        line-height: 1.9;
+        margin-bottom: var(--spacing-xxl);
+    }
+
+    .blog-content p {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .recommendations-header {
+        margin-top: var(--spacing-xl);
+        margin-bottom: var(--spacing-lg);
+        padding-top: var(--spacing-xl);
+        border-top: 2px solid var(--border-light);
+    }
+
+    .recommendations-header h2 {
+        color: var(--primary-blue);
+        font-size: clamp(1.2rem, 3vw, 1.6rem);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .recommendations-meta {
+        font-size: 0.85em;
+        color: var(--text-light);
+        display: flex;
+        gap: var(--spacing-lg);
+        flex-wrap: wrap;
+    }
+
+    .list-container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .list-item {
+        background: var(--bg-white);
+        border: 1px solid var(--border-light);
+        border-radius: 16px;
+        padding: var(--spacing-md);
+        transition: all 0.18s ease;
+        cursor: pointer;
+        display: flex;
+        gap: var(--spacing-md);
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .list-item:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+        border-color: var(--primary-blue);
+    }
+
+    .item-rank {
+        flex-shrink: 0;
+        width: 46px;
+        height: 46px;
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+        color: white;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+
+    .item-rank.top3 {
+        background: linear-gradient(135deg, #FFD700, #FFA500);
+        box-shadow: 0 0 14px rgba(255, 215, 0, 0.35);
+    }
+
+    .item-image {
+        flex-shrink: 0;
+        width: 90px;
+    }
+
+    .item-image img {
+        width: 100%;
+        height: 135px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .item-content {
+        flex-grow: 1;
+        min-width: 0;
+    }
+
+    .item-category-badge {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 999px;
+        font-size: 0.7em;
+        font-weight: 700;
+        margin-bottom: var(--spacing-xs);
+        background: var(--accent-gold);
+        color: var(--primary-dark);
+    }
+
+    .item-title {
+        color: var(--primary-blue);
+        font-size: clamp(1rem, 2.4vw, 1.15rem);
+        margin-bottom: 4px;
+        font-weight: 600;
+    }
+
+    .item-author {
+        color: var(--text-gray);
+        margin-bottom: 6px;
+        font-size: 0.85em;
+    }
+
+    .item-meta {
+        display: flex;
+        gap: var(--spacing-md);
+        font-size: 0.75em;
+        color: var(--text-light);
+        flex-wrap: wrap;
+    }
+
+    .meta-rating {
+        color: var(--accent-orange);
+        font-weight: 600;
+    }
+
+    .item-point {
+        color: var(--text-gray);
+        font-size: 0.8em;
+        margin-top: 4px;
+        font-style: italic;
+    }
+
+    .footer {
+        background: transparent;
+        color: rgba(255,255,255,0.7);
+        padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    .footer-links {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .footer-links a {
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        margin: 0 var(--spacing-md);
+        transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+        color: var(--accent-gold);
+    }
+
+    .affiliate-disclosure {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 8px;
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        font-size: 0.85em;
+        line-height: 1.6;
+    }
+
+    /* Footer Social Links */
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .footer-social a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.15);
+        font-size: 0.9em;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+    .footer-social a:hover {
+        background: rgba(255,255,255,0.15);
+        border-color: rgba(255,255,255,0.3);
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .footer-social svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+    }
+
+    .footer-social a.social-note:hover {
+        background: rgba(65, 197, 143, 0.2);
+        border-color: rgba(65, 197, 143, 0.5);
+    }
+
+    .footer-social a.social-x:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* カテゴリ dropdown (モバイル用) */
+    .category-dropdown {
+        display: none;
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 0.95em;
+        font-weight: 500;
+        border: 2px solid var(--primary-blue);
+        border-radius: 14px;
+        background: linear-gradient(135deg, #FFFFFF 0%, #F8FBFF 100%);
+        color: var(--primary-blue);
+        font-family: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(28, 63, 94, 0.08);
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%231C3F5E' d='M4.427 6.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 6H4.604a.25.25 0 00-.177.427z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        padding-right: 40px;
+    }
+
+    .category-dropdown:hover {
+        border-color: var(--primary-light);
+        box-shadow: 0 6px 16px rgba(28, 63, 94, 0.15);
+        transform: translateY(-1px);
+    }
+
+    .category-dropdown:focus {
+        outline: none;
+        border-color: var(--primary-blue);
+        box-shadow: 0 0 0 4px rgba(28, 63, 94, 0.12), 0 6px 16px rgba(28, 63, 94, 0.15);
+    }
+
+    .category-dropdown:active {
+        transform: translateY(0);
+    }
+
+    .category-dropdown option {
+        padding: 12px;
+        font-size: 1em;
+        background: white;
+        color: var(--text-dark);
+    }
+
+    .category-dropdown option:checked {
+        background: var(--primary-blue);
+        color: white;
+    }
+
+    @media (max-width: 1024px) {
+        .page-shell {
+            padding: var(--spacing-lg);
+        }
+
+        .main-container {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+            position: static;
+            max-height: none;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* タブレットではカテゴリリストを隠してdropdown表示 */
+        .category-list {
+            display: none;
+        }
+
+        .category-dropdown {
+            display: block;
+        }
+
+        .content {
+            padding: var(--spacing-lg);
+        }
+
+        .list-item {
+            padding: var(--spacing-md);
+        }
+    }
+
+    @media (max-width: 768px) {
+        body {
+            font-size: clamp(13px, 4vw, 15px);
+        }
+
+        .header {
+            height: auto;
+        }
+
+        .nav-container {
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 8px 12px;
+            row-gap: 6px;
+        }
+
+        .nav-left {
+            order: 1;
+        }
+
+        .nav-search {
+            order: 2;
+            flex: 1;
+            max-width: none;
+            width: auto;
+            margin: 0 8px;
+        }
+
+        .nav-toggle {
+            display: block;
+            order: 3;
+        }
+
+        .nav-right {
+            order: 4;
+            width: 100%;
+            justify-content: center;
+            padding-top: 6px;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: row;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            width: 100%;
+        }
+
+        .nav-links.open {
+            display: flex;
+        }
+
+        .nav-link {
+            padding: 6px 16px;
+            font-size: 0.9em;
+            flex: 0 1 auto;
+        }
+
+        .page-shell {
+            padding: var(--spacing-md) var(--spacing-sm) var(--spacing-xl);
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .sidebar,
+        .content {
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .sidebar {
+            padding: var(--spacing-md);
+        }
+
+        .category-label {
+            padding: 7px 8px;
+            border-radius: 10px;
+        }
+
+        .content {
+            padding: var(--spacing-md);
+        }
+
+        .blog-title {
+            font-size: clamp(1.2rem, 4.2vw, 1.5rem);
+        }
+
+        .list-item {
+            flex-direction: row;
+            align-items: flex-start;
+            padding: var(--spacing-md);
+        }
+
+        .item-image {
+            width: 70px;
+        }
+
+        .item-image img {
+            height: 110px;
+        }
+
+        .item-rank {
+            width: 40px;
+            height: 40px;
+            font-size: 1em;
+        }
+
+        .item-meta {
+            font-size: 0.72em;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .list-item {
+            position: relative;
+            padding: 12px;
+            gap: 12px;
+        }
+
+        .item-image {
+            width: 120px !important;
+        }
+
+        .item-image img {
+            height: 170px !important;
+        }
+
+        .item-rank {
+            position: absolute;
+            top: 10px;
+            left: 16px;
+            z-index: 5;
+            width: 32px !important;
+            height: 32px !important;
+            font-size: 0.85em !important;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+        }
+
+        .item-rank.top3 {
+            width: 34px !important;
+            height: 34px !important;
+        }
+
+        .item-content {
+            padding-left: 4px;
+        }
+    }
+
+    @media (max-width: 340px) {
+        .item-image {
+            width: 105px !important;
+        }
+
+        .item-image img {
+            height: 155px !important;
+        }
+    }
+
+    /* 検索結果オーバーレイ */
+    .search-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 2000;
+        overflow-y: auto;
+        padding: var(--spacing-xl);
+    }
+
+    .search-overlay.active {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: calc(var(--header-height) + var(--spacing-xl));
+    }
+
+    .search-results-container {
+        background: white;
+        border-radius: 16px;
+        max-width: 700px;
+        width: 100%;
+        max-height: calc(100vh - var(--header-height) - var(--spacing-xxl) * 2);
+        overflow-y: auto;
+        box-shadow: var(--shadow-lg);
+    }
+
+    .search-results-header {
+        padding: var(--spacing-lg);
+        border-bottom: 1px solid var(--border-light);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        background: white;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .search-results-title {
+        color: var(--primary-blue);
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+
+    .search-close-btn {
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: var(--text-gray);
+        padding: 4px 8px;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+    }
+
+    .search-close-btn:hover {
+        background: var(--bg-gray-light);
+        color: var(--text-dark);
+    }
+
+    .search-results-list {
+        padding: var(--spacing-md);
+    }
+
+    .search-result-item {
+        padding: var(--spacing-md);
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+        margin-bottom: var(--spacing-sm);
+        border: 1px solid var(--border-light);
+    }
+
+    .search-result-item:hover {
+        background: var(--bg-gray-light);
+        border-color: var(--primary-blue);
+    }
+
+    .search-result-title {
+        color: var(--primary-blue);
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    .search-result-excerpt {
+        font-size: 0.85em;
+        color: var(--text-gray);
+        line-height: 1.5;
+    }
+
+    .search-no-results {
+        text-align: center;
+        padding: var(--spacing-xxl);
+        color: var(--text-gray);
+    }
+
+    .search-result-item mark {
+        background: var(--accent-gold);
+        color: var(--primary-dark);
+        padding: 0 2px;
+        border-radius: 2px;
+    }
+
+    /* Read more link styles */
+    .read-more-container {
+        margin-top: var(--spacing-md);
+    }
+
+    .read-more-link {
+        display: inline-block;
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 16px;
+        background: var(--bg-gray-light);
+        border-radius: 999px;
+        transition: all 0.2s ease;
+    }
+
+    .read-more-link:hover {
+        background: var(--primary-blue);
+        color: white;
+    }
+
+    /* Recommendations preview styles */
+    .recommendations-preview {
+        margin-top: var(--spacing-lg);
+        padding: var(--spacing-md);
+        background: var(--bg-gray-light);
+        border-radius: 12px;
+    }
+
+    .reco-preview-header {
+        font-size: 0.9em;
+        color: var(--text-gray);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .reco-preview-books {
+        display: flex;
+        gap: var(--spacing-sm);
+        align-items: center;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .reco-preview-item {
+        width: 50px;
+        height: 75px;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .reco-preview-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .reco-preview-more {
+        width: 50px;
+        height: 75px;
+        background: var(--primary-blue);
+        color: white;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85em;
+        font-weight: 600;
+    }
+
+    .reco-preview-link {
+        display: inline-block;
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-size: 0.85em;
+        font-weight: 500;
+    }
+
+    .reco-preview-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Title link hover effect */
+    .blog-title a:hover {
+        color: var(--primary-blue) !important;
+    }
+  </style>
 </Base>
