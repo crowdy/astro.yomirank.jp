@@ -1121,8 +1121,8 @@ const jsonPayload = JSON.stringify(normalizedData);
     var excludeCategories = ['タレント写真集', 'ボーイズラブノベルス'];
 
     function addAffiliateTag(link) {
-      if (!link) return '#';
-      return link.includes('?') ? link + '&tag=yomirank-22' : link + '?tag=yomirank-22';
+      // Amazon 어소시에이트 계약 종료로 태그 부착 중단. 링크 원본 반환.
+      return link || '#';
     }
 
     function initBestsellers() {
