@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/81WjUcN5jEL._SY425_.jpg
     rating: 5
     point: ChromeのAI統合アーキテクチャを技術的に解説
-    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E9%96%8B%E7%99%BA%E3%83%BB%E9%81%8B%E7%94%A8%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E6%B3%95%E5%8B%99%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8%20%E2%80%95%E3%81%9D%E3%81%AEAI%E3%80%81%E8%A8%B4%E3%81%88%E3%82%89%E3%82%8C%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B%EF%BC%9F%E2%80%95/dp/B0G1117PZK?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E9%96%8B%E7%99%BA%E3%83%BB%E9%81%8B%E7%94%A8%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E6%B3%95%E5%8B%99%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8%20%E2%80%95%E3%81%9D%E3%81%AEAI%E3%80%81%E8%A8%B4%E3%81%88%E3%82%89%E3%82%8C%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8B%EF%BC%9F%E2%80%95/dp/B0G1117PZK
   - rank: 2
     asin: B0DT5SX942
     title: GeminiとはじめるPythonプログラミング
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/71z3aYjhyEL._SY425_.jpg
     rating: 5
     point: Geminiを活用した開発手法を実例で学べる
-    affiliateUrl: https://www.amazon.co.jp/Gemini%E3%81%A8%E3%81%AF%E3%81%98%E3%82%81%E3%82%8BPython%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/dp/B0DT5SX942?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/Gemini%E3%81%A8%E3%81%AF%E3%81%98%E3%82%81%E3%82%8BPython%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/dp/B0DT5SX942
   - rank: 3
     asin: B0FVMH225K
     title: エッジAIとプライバシー保護技術
@@ -35,7 +35,7 @@ books:
     image: ""
     rating: 0
     point: Nano Bananaのようなローカル処理の仕組みを解説
-    affiliateUrl: https://www.amazon.co.jp/%E3%82%A8%E3%83%83%E3%82%B8AI%E3%81%A8%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E4%BF%9D%E8%AD%B7%E6%8A%80%E8%A1%93/dp/B0FVMH225K?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%82%A8%E3%83%83%E3%82%B8AI%E3%81%A8%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E4%BF%9D%E8%AD%B7%E6%8A%80%E8%A1%93/dp/B0FVMH225K
   - rank: 4
     asin: B0DPK2HKVR
     title: ［図解］AI時代の教師が知っておきたいIT・情報リテラシー　校務DXに必要な基礎知識
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/81f3vIHRvCL._SY425_.jpg
     rating: 5
     point: AI生成情報との付き合い方を学べる必読書
-    affiliateUrl: https://www.amazon.co.jp/%EF%BC%BB%E5%9B%B3%E8%A7%A3%EF%BC%BDAI%E6%99%82%E4%BB%A3%E3%81%AE%E6%95%99%E5%B8%AB%E3%81%8C%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84IT%E3%83%BB%E6%83%85%E5%A0%B1%E3%83%AA%E3%83%86%E3%83%A9%E3%82%B7%E3%83%BC%E3%80%80%E6%A0%A1%E5%8B%99DX%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AA%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/dp/B0DPK2HKVR?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%EF%BC%BB%E5%9B%B3%E8%A7%A3%EF%BC%BDAI%E6%99%82%E4%BB%A3%E3%81%AE%E6%95%99%E5%B8%AB%E3%81%8C%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84IT%E3%83%BB%E6%83%85%E5%A0%B1%E3%83%AA%E3%83%86%E3%83%A9%E3%82%B7%E3%83%BC%E3%80%80%E6%A0%A1%E5%8B%99DX%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AA%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98/dp/B0DPK2HKVR
 ruby: |-
   2026{年|ねん}、GoogleがWebブラウザ「Google Chrome」に{最新|さいしん}の{生成|せいせい}AIモデル「Gemini 3」を{大規模|だいきぼ}{統合|とうごう}するアップデートを{発表|はっぴょう}しました。サイドパネルから{軽量版|けいりょうばん}の「Nano Banana」も{利用可能|りようかのう}になり、ブラウジング{中|ちゅう}にいつでもAIアシスタントが{使|つか}える{時代|じだい}が{到来|とうらい}しました。
 

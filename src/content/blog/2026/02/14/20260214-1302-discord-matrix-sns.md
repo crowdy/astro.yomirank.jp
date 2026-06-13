@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/81ZW89zlObL._SY466_.jpg
     rating: 5
     point: Matrixなど分散型SNSの技術基盤を詳解
-    affiliateUrl: https://www.amazon.co.jp/%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E8%AB%96%E3%83%BB%E6%94%B9%E8%A8%82%E7%89%88%E3%80%80%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8A%E3%82%92%E5%86%8D%E8%A8%AD%E8%A8%88%E3%81%99%E3%82%8B/dp/B0923NFS8Z?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%82%BD%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E8%AB%96%E3%83%BB%E6%94%B9%E8%A8%82%E7%89%88%E3%80%80%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8A%E3%82%92%E5%86%8D%E8%A8%AD%E8%A8%88%E3%81%99%E3%82%8B/dp/B0923NFS8Z
   - rank: 2
     asin: B096X6BHS8
     title: プライバシーという権利　個人情報はなぜ守られるべきか (岩波新書)
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/61ziC8pUVKS._SY522_.jpg
     rating: 5
     point: 年齢確認とプライバシーの本質的問題を考察
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%A8%E3%81%84%E3%81%86%E6%A8%A9%E5%88%A9%E3%80%80%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%81%AF%E3%81%AA%E3%81%9C%E5%AE%88%E3%82%89%E3%82%8C%E3%82%8B%E3%81%B9%E3%81%8D%E3%81%8B%20(%E5%B2%A9%E6%B3%A2%E6%96%B0%E6%9B%B8)/dp/B096X6BHS8?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%A8%E3%81%84%E3%81%86%E6%A8%A9%E5%88%A9%E3%80%80%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%81%AF%E3%81%AA%E3%81%9C%E5%AE%88%E3%82%89%E3%82%8C%E3%82%8B%E3%81%B9%E3%81%8D%E3%81%8B%20(%E5%B2%A9%E6%B3%A2%E6%96%B0%E6%9B%B8)/dp/B096X6BHS8
   - rank: 3
     asin: B073J82NQX
     title: 暗号技術のすべて
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/A1kDz7iJg+L._SY425_.jpg
     rating: 5
     point: E2E暗号化など安全な通信の仕組みを学べる
-    affiliateUrl: https://www.amazon.co.jp/%E6%9A%97%E5%8F%B7%E6%8A%80%E8%A1%93%E3%81%AE%E3%81%99%E3%81%B9%E3%81%A6/dp/B073J82NQX?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E6%9A%97%E5%8F%B7%E6%8A%80%E8%A1%93%E3%81%AE%E3%81%99%E3%81%B9%E3%81%A6/dp/B073J82NQX
 ruby: |-
   Discordは2026{年|ねん}3{月|つき}から{全|ぜん}ユーザーを{対象|たいしょう}とした{年齢|ねんれい}{確認|かくにん}の{実施|じっし}を{発表|はっぴょう}し、プライバシーを{重視|じゅうし}するユーザーの{間|あいだ}で{波紋|はもん}を{広|ひろ}げている。この{発表|はっぴょう}を{受|う}け、オープンソースの{分散型|ぶんさんがた}チャットプラットフォーム「Matrix」への{移行|いこう}が{急増|きゅうぞう}し、Matrix.org{財団|ざいだん}はホームサーバーへの{登録数|とうろくすう}が{過去最高|かこさいこう}を{記録|きろく}したと{明|あき}らかにした。
 

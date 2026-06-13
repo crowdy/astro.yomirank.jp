@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/815A6An28LL._SY425_.jpg
     rating: 5
     point: 動画メディアの進化と視聴者行動を解説
-    affiliateUrl: https://www.amazon.co.jp/%E5%8B%95%E7%94%BB2.0%E3%80%80VISUAL%20STORYTELLING%20(NewsPicks%20Book)/dp/B07JLZQHPF?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E5%8B%95%E7%94%BB2.0%E3%80%80VISUAL%20STORYTELLING%20(NewsPicks%20Book)/dp/B07JLZQHPF
   - rank: 2
     asin: B0CSFJ67KT
     title: 伝わる！動画テロップのつくり方
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/716aPujAlLL._SY425_.jpg
     rating: 5
     point: 視聴者を惹きつける動画戦略を学べる
-    affiliateUrl: https://www.amazon.co.jp/%E4%BC%9D%E3%82%8F%E3%82%8B%EF%BC%81%E5%8B%95%E7%94%BB%E3%83%86%E3%83%AD%E3%83%83%E3%83%97%E3%81%AE%E3%81%A4%E3%81%8F%E3%82%8A%E6%96%B9/dp/B0CSFJ67KT?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E4%BC%9D%E3%82%8F%E3%82%8B%EF%BC%81%E5%8B%95%E7%94%BB%E3%83%86%E3%83%AD%E3%83%83%E3%83%97%E3%81%AE%E3%81%A4%E3%81%8F%E3%82%8A%E6%96%B9/dp/B0CSFJ67KT
   - rank: 3
     asin: "4864104565"
     title: アテンション
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/81DZQLT3NsL._SY425_.jpg
     rating: 5
     point: 視聴者の注意を獲得する方法論を提示
-    affiliateUrl: https://www.amazon.co.jp/%E3%82%A2%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3/dp/4864104565?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%82%A2%E3%83%86%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3/dp/4864104565
 ruby: |-
   {最近|さいきん}、{米国|べいこく}でテレビを{使|つか}ったYouTube{視聴者数|しちょうしゃすう}が{昼間|ひるま}の{平均|へいきん}で630{万人|まんにん}に{達|たっ}し、Netflixの280{万人|まんにん}を2{倍以上|ばいいじょう}{上回|うわまわ}ったことが{報道|ほうどう}された。この{数字|すうじ}は、{動画配信|どうがはいしん}サービスの{勢力図|せいりょくず}が{大|おお}きく{変化|へんか}していることを{示|しめ}している。
 

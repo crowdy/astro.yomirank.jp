@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/71vGl8v1x9L._SY425_.jpg
     rating: 5
     point: AI時代における創造性の本質を探る
-    affiliateUrl: https://www.amazon.co.jp/%E6%94%B9%E8%A8%82%E7%89%88%20AI%20%C3%97%20%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%83%86%E3%82%A3%E3%83%93%E3%83%86%E3%82%A3%3A%E6%83%85%E5%A0%B1%E3%81%A8%E7%94%9F%E5%91%BD%E3%81%A8%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%81%A8%E3%80%82/dp/B0CHM43RZS?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E6%94%B9%E8%A8%82%E7%89%88%20AI%20%C3%97%20%E3%82%AF%E3%83%AA%E3%82%A8%E3%82%A4%E3%83%86%E3%82%A3%E3%83%93%E3%83%86%E3%82%A3%3A%E6%83%85%E5%A0%B1%E3%81%A8%E7%94%9F%E5%91%BD%E3%81%A8%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%81%A8%E3%80%82/dp/B0CHM43RZS
   - rank: 2
     asin: B0FSLLSV5V
     title: 生成AIパスポート公式テキスト 第４版
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/8190w2ULguL._SY425_.jpg
     rating: 5
     point: 音楽・画像生成AIの現状と未来を解説
-    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E3%83%91%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E5%85%AC%E5%BC%8F%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%20%E7%AC%AC%EF%BC%94%E7%89%88/dp/B0FSLLSV5V?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E3%83%91%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E5%85%AC%E5%BC%8F%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%20%E7%AC%AC%EF%BC%94%E7%89%88/dp/B0FSLLSV5V
   - rank: 3
     asin: B0CVFWHZ9X
     title: 音楽生成AI×配信サービスであなたもミュージシャンに♪Suno AIでアーティストデビューする方法 (未来を創るAI副業シリーズ)
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/71PrGZQH5TL._SY425_.jpg
     rating: 5
     point: テクノロジーと音楽制作の融合を論じる
-    affiliateUrl: https://www.amazon.co.jp/%E9%9F%B3%E6%A5%BD%E7%94%9F%E6%88%90AI%C3%97%E9%85%8D%E4%BF%A1%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%A7%E3%81%82%E3%81%AA%E3%81%9F%E3%82%82%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%B7%E3%83%A3%E3%83%B3%E3%81%AB%E2%99%AASuno%20AI%E3%81%A7%E3%82%A2%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B9%E3%83%88%E3%83%87%E3%83%93%E3%83%A5%E3%83%BC%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20(%E6%9C%AA%E6%9D%A5%E3%82%92%E5%89%B5%E3%82%8BAI%E5%89%AF%E6%A5%AD%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)/dp/B0CVFWHZ9X?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E9%9F%B3%E6%A5%BD%E7%94%9F%E6%88%90AI%C3%97%E9%85%8D%E4%BF%A1%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%A7%E3%81%82%E3%81%AA%E3%81%9F%E3%82%82%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%B7%E3%83%A3%E3%83%B3%E3%81%AB%E2%99%AASuno%20AI%E3%81%A7%E3%82%A2%E3%83%BC%E3%83%86%E3%82%A3%E3%82%B9%E3%83%88%E3%83%87%E3%83%93%E3%83%A5%E3%83%BC%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%20(%E6%9C%AA%E6%9D%A5%E3%82%92%E5%89%B5%E3%82%8BAI%E5%89%AF%E6%A5%AD%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)/dp/B0CVFWHZ9X
   - rank: 4
     asin: B0CVKY9L29
     title: Gemini API × SwiftUI マルチモーダル生成AIアプリ開発入門
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/714LwuApBaL._SY425_.jpg
     rating: 5
     point: 複数の入力形式を扱うAI技術の基礎
-    affiliateUrl: https://www.amazon.co.jp/Gemini%20API%20%C3%97%20SwiftUI%20%E3%83%9E%E3%83%AB%E3%83%81%E3%83%A2%E3%83%BC%E3%83%80%E3%83%AB%E7%94%9F%E6%88%90AI%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E5%85%A5%E9%96%80/dp/B0CVKY9L29?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/Gemini%20API%20%C3%97%20SwiftUI%20%E3%83%9E%E3%83%AB%E3%83%81%E3%83%A2%E3%83%BC%E3%83%80%E3%83%AB%E7%94%9F%E6%88%90AI%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E5%85%A5%E9%96%80/dp/B0CVKY9L29
   - rank: 5
     asin: B0CDG9QQGP
     title: 創造性はどこからやってくるか　――天然表現の世界 (ちくま新書)
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/71OBF6ktbML._SY522_.jpg
     rating: 5
     point: 人間とAIの創造プロセスを比較考察
-    affiliateUrl: https://www.amazon.co.jp/%E5%89%B5%E9%80%A0%E6%80%A7%E3%81%AF%E3%81%A9%E3%81%93%E3%81%8B%E3%82%89%E3%82%84%E3%81%A3%E3%81%A6%E3%81%8F%E3%82%8B%E3%81%8B%E3%80%80%E2%80%95%E2%80%95%E5%A4%A9%E7%84%B6%E8%A1%A8%E7%8F%BE%E3%81%AE%E4%B8%96%E7%95%8C%20(%E3%81%A1%E3%81%8F%E3%81%BE%E6%96%B0%E6%9B%B8)/dp/B0CDG9QQGP?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E5%89%B5%E9%80%A0%E6%80%A7%E3%81%AF%E3%81%A9%E3%81%93%E3%81%8B%E3%82%89%E3%82%84%E3%81%A3%E3%81%A6%E3%81%8F%E3%82%8B%E3%81%8B%E3%80%80%E2%80%95%E2%80%95%E5%A4%A9%E7%84%B6%E8%A1%A8%E7%8F%BE%E3%81%AE%E4%B8%96%E7%95%8C%20(%E3%81%A1%E3%81%8F%E3%81%BE%E6%96%B0%E6%9B%B8)/dp/B0CDG9QQGP
 ruby: |-
   Googleは2026{年|ねん}、{音楽|おんがく}{生成|せいせい}モデル「Lyria 3」をGeminiアプリに{統合|とうごう}し、ベータ{版|ばん}として{公開|こうかい}しました。テキストプロンプトに{加|くわ}え、{画像|がぞう}や{動画|どうが}からも{最長|さいちょう}120{秒|びょう}の{楽曲|がっきょく}を{生成|せいせい}できる{機能|きのう}が、18{歳|さい}{以上|いじょう}のユーザー{向|む}けに{日本語|にほんご}を{含|ふく}む8{言語|げんご}で{提供|ていきょう}{開始|かいし}されています。
 

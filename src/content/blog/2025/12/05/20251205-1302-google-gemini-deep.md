@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/714A8qwdlfL._SY522_.jpg
     rating: 5
     point: AI技術の社会実装における法的課題を体系的に解説
-    affiliateUrl: https://www.amazon.co.jp/AI%E3%81%AE%E6%99%82%E4%BB%A3%E3%81%A8%E6%B3%95%20(%E5%B2%A9%E6%B3%A2%E6%96%B0%E6%9B%B8)/dp/B085RF8P6M?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%E3%81%AE%E6%99%82%E4%BB%A3%E3%81%A8%E6%B3%95%20(%E5%B2%A9%E6%B3%A2%E6%96%B0%E6%9B%B8)/dp/B085RF8P6M
   - rank: 2
     asin: B0BC8JRBPG
     title: 深層学習　改訂第２版 (機械学習プロフェッショナルシリーズ)
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/71tg1Audj7L._SY425_.jpg
     rating: 5
     point: AIの基礎技術を数学的背景から丁寧に説明した定番書
-    affiliateUrl: https://www.amazon.co.jp/%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92%E3%80%80%E6%94%B9%E8%A8%82%E7%AC%AC%EF%BC%92%E7%89%88%20(%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%83%97%E3%83%AD%E3%83%95%E3%82%A7%E3%83%83%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)/dp/B0BC8JRBPG?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92%E3%80%80%E6%94%B9%E8%A8%82%E7%AC%AC%EF%BC%92%E7%89%88%20(%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%83%97%E3%83%AD%E3%83%95%E3%82%A7%E3%83%83%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)/dp/B0BC8JRBPG
   - rank: 3
     asin: B0791XCYQG
     title: AI vs. 教科書が読めない子どもたち
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/71AB9HVogcL._SY425_.jpg
     rating: 5
     point: AIの限界と人間の思考力の重要性を考察
-    affiliateUrl: https://www.amazon.co.jp/AI%20vs.%20%E6%95%99%E7%A7%91%E6%9B%B8%E3%81%8C%E8%AA%AD%E3%82%81%E3%81%AA%E3%81%84%E5%AD%90%E3%81%A9%E3%82%82%E3%81%9F%E3%81%A1/dp/B0791XCYQG?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%20vs.%20%E6%95%99%E7%A7%91%E6%9B%B8%E3%81%8C%E8%AA%AD%E3%82%81%E3%81%AA%E3%81%84%E5%AD%90%E3%81%A9%E3%82%82%E3%81%9F%E3%81%A1/dp/B0791XCYQG
   - rank: 4
     asin: B00UAAK07S
     title: 人工知能は人間を超えるか (角川ＥＰＵＢ選書)
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/817gw3T-FEL._SY425_.jpg
     rating: 5
     point: ディープラーニングの本質と未来を第一人者が語る
-    affiliateUrl: https://www.amazon.co.jp/%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AF%E4%BA%BA%E9%96%93%E3%82%92%E8%B6%85%E3%81%88%E3%82%8B%E3%81%8B%20(%E8%A7%92%E5%B7%9D%EF%BC%A5%EF%BC%B0%EF%BC%B5%EF%BC%A2%E9%81%B8%E6%9B%B8)/dp/B00UAAK07S?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AF%E4%BA%BA%E9%96%93%E3%82%92%E8%B6%85%E3%81%88%E3%82%8B%E3%81%8B%20(%E8%A7%92%E5%B7%9D%EF%BC%A5%EF%BC%B0%EF%BC%B5%EF%BC%A2%E9%81%B8%E6%9B%B8)/dp/B00UAAK07S
   - rank: 5
     asin: B07WTLTZKX
     title: ＡＩに負けない子どもを育てる
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/712sjqYf9vL._SY425_.jpg
     rating: 5
     point: AI時代に必要な人間の能力開発について実践的に提案
-    affiliateUrl: https://www.amazon.co.jp/%EF%BC%A1%EF%BC%A9%E3%81%AB%E8%B2%A0%E3%81%91%E3%81%AA%E3%81%84%E5%AD%90%E3%81%A9%E3%82%82%E3%82%92%E8%82%B2%E3%81%A6%E3%82%8B/dp/B07WTLTZKX?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%EF%BC%A1%EF%BC%A9%E3%81%AB%E8%B2%A0%E3%81%91%E3%81%AA%E3%81%84%E5%AD%90%E3%81%A9%E3%82%82%E3%82%92%E8%82%B2%E3%81%A6%E3%82%8B/dp/B07WTLTZKX
 ruby: |-
   Googleは12{月|がつ}5{日|にち}、Geminiアプリで{新|あら}たに「Gemini 3 Deep Think」モードを{公開|こうかい}した。この{新|あたら}しい{機能|きのう}は{複数|ふくすう}の{仮説|かせつ}を{同時|どうじ}に{推論|すいろん}できる{高度|こうど}なAI{機能|きのう}で、Google AI Ultra{加入|かにゅう}{者|しゃ}（{月額|げつがく}36,400{円|えん}）が{利用|りよう}{可能|かのう}となっている。
 

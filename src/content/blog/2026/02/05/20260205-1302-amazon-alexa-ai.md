@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/81JzbjtyHHL._SY425_.jpg
     rating: 5
     point: テック企業のAI戦略を詳しく解説
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%80%E3%83%96%E3%83%AB%E3%83%8F%E3%83%BC%E3%83%99%E3%82%B9%E3%83%88%20%E5%8B%9D%E3%81%A1%E7%B6%9A%E3%81%91%E3%82%8B%E4%BB%95%E7%B5%84%E3%81%BF%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8BAI%E6%99%82%E4%BB%A3%E3%81%AE%E6%88%A6%E7%95%A5%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/dp/4478111014?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%80%E3%83%96%E3%83%AB%E3%83%8F%E3%83%BC%E3%83%99%E3%82%B9%E3%83%88%20%E5%8B%9D%E3%81%A1%E7%B6%9A%E3%81%91%E3%82%8B%E4%BB%95%E7%B5%84%E3%81%BF%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8BAI%E6%99%82%E4%BB%A3%E3%81%AE%E6%88%A6%E7%95%A5%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/dp/4478111014
   - rank: 2
     asin: B0FL2KLC1W
     title: "生成AIの未来図: 一流には見えている仕事の変革、根本ルール。使える未来の生成AI活用指南。"
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/81cpq+SnRfL._SY522_.jpg
     rating: 5
     point: 会話AIの技術的進化を体系的に理解
-    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E3%81%AE%E6%9C%AA%E6%9D%A5%E5%9B%B3%3A%20%E4%B8%80%E6%B5%81%E3%81%AB%E3%81%AF%E8%A6%8B%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E4%BB%95%E4%BA%8B%E3%81%AE%E5%A4%89%E9%9D%A9%E3%80%81%E6%A0%B9%E6%9C%AC%E3%83%AB%E3%83%BC%E3%83%AB%E3%80%82%E4%BD%BF%E3%81%88%E3%82%8B%E6%9C%AA%E6%9D%A5%E3%81%AE%E7%94%9F%E6%88%90AI%E6%B4%BB%E7%94%A8%E6%8C%87%E5%8D%97%E3%80%82/dp/B0FL2KLC1W?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E3%81%AE%E6%9C%AA%E6%9D%A5%E5%9B%B3%3A%20%E4%B8%80%E6%B5%81%E3%81%AB%E3%81%AF%E8%A6%8B%E3%81%88%E3%81%A6%E3%81%84%E3%82%8B%E4%BB%95%E4%BA%8B%E3%81%AE%E5%A4%89%E9%9D%A9%E3%80%81%E6%A0%B9%E6%9C%AC%E3%83%AB%E3%83%BC%E3%83%AB%E3%80%82%E4%BD%BF%E3%81%88%E3%82%8B%E6%9C%AA%E6%9D%A5%E3%81%AE%E7%94%9F%E6%88%90AI%E6%B4%BB%E7%94%A8%E6%8C%87%E5%8D%97%E3%80%82/dp/B0FL2KLC1W
   - rank: 3
     asin: B0798BNCYG
     title: プラットフォーム革命――経済を支配するビジネスモデルはどう機能し、どう作られるのか
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/91Yslr8LkZL._SY425_.jpg
     rating: 5
     point: エコシステム戦略の本質を学べる
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E9%9D%A9%E5%91%BD%E2%80%95%E2%80%95%E7%B5%8C%E6%B8%88%E3%82%92%E6%94%AF%E9%85%8D%E3%81%99%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AF%E3%81%A9%E3%81%86%E6%A9%9F%E8%83%BD%E3%81%97%E3%80%81%E3%81%A9%E3%81%86%E4%BD%9C%E3%82%89%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B/dp/B0798BNCYG?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E9%9D%A9%E5%91%BD%E2%80%95%E2%80%95%E7%B5%8C%E6%B8%88%E3%82%92%E6%94%AF%E9%85%8D%E3%81%99%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AF%E3%81%A9%E3%81%86%E6%A9%9F%E8%83%BD%E3%81%97%E3%80%81%E3%81%A9%E3%81%86%E4%BD%9C%E3%82%89%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B/dp/B0798BNCYG
   - rank: 4
     asin: B0GL1BDV19
     title: マルチエージェントによる自律ソフトウェア設計・開発 マルチエージェントシリーズ
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/81J8TlD7DwL._SY466_.jpg
     rating: 5
     point: AI自律性の仕組みを技術的に解説
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%AB%E3%82%88%E3%82%8B%E8%87%AA%E5%BE%8B%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E8%A8%AD%E8%A8%88%E3%83%BB%E9%96%8B%E7%99%BA%20%E3%83%9E%E3%83%AB%E3%83%81%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA/dp/B0GL1BDV19?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%9E%E3%83%AB%E3%83%81%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%AB%E3%82%88%E3%82%8B%E8%87%AA%E5%BE%8B%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E8%A8%AD%E8%A8%88%E3%83%BB%E9%96%8B%E7%99%BA%20%E3%83%9E%E3%83%AB%E3%83%81%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA/dp/B0GL1BDV19
   - rank: 5
     asin: "4054069568"
     title: "ビジネスパーソンのためのChatGPT活用大全: 毎日の仕事が一気に変わる!"
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/718mp3nFNSL._SY342_.jpg
     rating: 5
     point: AI時代の収益化戦略を網羅的に紹介
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%BD%E3%83%B3%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEChatGPT%E6%B4%BB%E7%94%A8%E5%A4%A7%E5%85%A8%3A%20%E6%AF%8E%E6%97%A5%E3%81%AE%E4%BB%95%E4%BA%8B%E3%81%8C%E4%B8%80%E6%B0%97%E3%81%AB%E5%A4%89%E3%82%8F%E3%82%8B!/dp/4054069568?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%91%E3%83%BC%E3%82%BD%E3%83%B3%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEChatGPT%E6%B4%BB%E7%94%A8%E5%A4%A7%E5%85%A8%3A%20%E6%AF%8E%E6%97%A5%E3%81%AE%E4%BB%95%E4%BA%8B%E3%81%8C%E4%B8%80%E6%B0%97%E3%81%AB%E5%A4%89%E3%82%8F%E3%82%8B!/dp/4054069568
 ruby: |-
   2026{年|ねん}、Amazonが{次世代|じせだい}AIアシスタント「Alexa+」を{全米|ぜんべい}で{正式|せいしき}{展開|てんかい}し、プライム{会員|かいいん}は{追加|ついか}{料金|りょうきん}なしで{利用|りよう}{可能|かのう}になりました。{強化|きょうか}された{会話|かいわ}{機能|きのう}や{予約|よやく}{代行|だいこう}などの{自律|じりつ}{型|がた}エージェント{機能|きのう}が{提供|ていきょう}され、OpenAIやGoogleとのAI{競争|きょうそう}が{新|あら}たな{段階|だんかい}に{入|はい}っています。
 

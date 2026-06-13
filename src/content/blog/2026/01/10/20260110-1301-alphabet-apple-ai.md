@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/71+xkOUDhfL._SY425_.jpg
     rating: 5
     point: テック巨人の戦略を徹底分析
-    affiliateUrl: https://www.amazon.co.jp/the%20four%20GAFA%E3%80%80%E5%9B%9B%E9%A8%8E%E5%A3%AB%E3%81%8C%E5%89%B5%E3%82%8A%E5%A4%89%E3%81%88%E3%81%9F%E4%B8%96%E7%95%8C/dp/B07DNCCG5Q?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/the%20four%20GAFA%E3%80%80%E5%9B%9B%E9%A8%8E%E5%A3%AB%E3%81%8C%E5%89%B5%E3%82%8A%E5%A4%89%E3%81%88%E3%81%9F%E4%B8%96%E7%95%8C/dp/B07DNCCG5Q
   - rank: 2
     asin: B08QVXJJYG
     title: 2030年：すべてが「加速」する世界に備えよ (NewsPicksパブリッシング)
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/81l4VsL4AEL._SY466_.jpg
     rating: 5
     point: AI時代の未来予測と対応策
-    affiliateUrl: https://www.amazon.co.jp/2030%E5%B9%B4%EF%BC%9A%E3%81%99%E3%81%B9%E3%81%A6%E3%81%8C%E3%80%8C%E5%8A%A0%E9%80%9F%E3%80%8D%E3%81%99%E3%82%8B%E4%B8%96%E7%95%8C%E3%81%AB%E5%82%99%E3%81%88%E3%82%88%20(NewsPicks%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0)/dp/B08QVXJJYG?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/2030%E5%B9%B4%EF%BC%9A%E3%81%99%E3%81%B9%E3%81%A6%E3%81%8C%E3%80%8C%E5%8A%A0%E9%80%9F%E3%80%8D%E3%81%99%E3%82%8B%E4%B8%96%E7%95%8C%E3%81%AB%E5%82%99%E3%81%88%E3%82%88%20(NewsPicks%E3%83%91%E3%83%96%E3%83%AA%E3%83%83%E3%82%B7%E3%83%B3%E3%82%B0)/dp/B08QVXJJYG
   - rank: 3
     asin: B0CFV45YBP
     title: ザ・ゴール・オブ・ザ・カンパニー
@@ -35,7 +35,7 @@ books:
     image: ""
     rating: 0
     point: 企業価値創造の本質を学ぶ
-    affiliateUrl: https://www.amazon.co.jp/%E3%82%B6%E3%83%BB%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%B6%E3%83%BB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%8B%E3%83%BC/dp/B0CFV45YBP?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%82%B6%E3%83%BB%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB%E3%82%B6%E3%83%BB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%8B%E3%83%BC/dp/B0CFV45YBP
   - rank: 4
     asin: B0BNQ267HX
     title: AI 2041　人工知能が変える20年後の未来 (文春e-book)
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/91ghsN+ts6L._SY425_.jpg
     rating: 5
     point: AI技術の未来をシナリオで描く
-    affiliateUrl: https://www.amazon.co.jp/AI%202041%E3%80%80%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%8C%E5%A4%89%E3%81%88%E3%82%8B20%E5%B9%B4%E5%BE%8C%E3%81%AE%E6%9C%AA%E6%9D%A5%20(%E6%96%87%E6%98%A5e-book)/dp/B0BNQ267HX?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%202041%E3%80%80%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%8C%E5%A4%89%E3%81%88%E3%82%8B20%E5%B9%B4%E5%BE%8C%E3%81%AE%E6%9C%AA%E6%9D%A5%20(%E6%96%87%E6%98%A5e-book)/dp/B0BNQ267HX
 ruby: |-
   2025{年|ねん}、テック{業界|ぎょうかい}に{歴史|れきし}{的|てき}な{瞬間|しゅんかん}が{訪|おとず}れた。Googleの{親会社|おやがいしゃ}Alphabetの{時価|じか}{総額|そうがく}が3{兆|ちょう}8800{億|おく}ドルに{達|たっ}し、{長年|ながねん}トップを{走|はし}り{続|つづ}けてきたAppleの3{兆|ちょう}8400{億|おく}ドルを{初|はじ}めて{上回|うわまわ}ったのだ。この{逆転|ぎゃくてん}{劇|げき}の{背景|はいけい}には、Alphabetの{積極|せっきょく}{的|てき}なAI{技術|ぎじゅつ}への{投資|とうし}がある。
 

@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/810R7HtV+TL._SY522_.jpg
     rating: 5
     point: AIとデザインツールの融合を体系的に解説
-    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E6%99%82%E4%BB%A3%E3%81%AE%E6%96%B0%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E6%88%A6%E7%95%A5%20%3A%20COG%20%C3%97%20COE%E6%88%A6%E7%95%A5%E3%81%A7%E6%8F%8F%E3%81%8F%E5%8B%9D%E3%81%A1%E7%AD%8B%20COG%C3%97COE%E6%88%A6%E7%95%A5%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA/dp/B0FSYNRZ6J?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E6%99%82%E4%BB%A3%E3%81%AE%E6%96%B0%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E6%88%A6%E7%95%A5%20%3A%20COG%20%C3%97%20COE%E6%88%A6%E7%95%A5%E3%81%A7%E6%8F%8F%E3%81%8F%E5%8B%9D%E3%81%A1%E7%AD%8B%20COG%C3%97COE%E6%88%A6%E7%95%A5%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA/dp/B0FSYNRZ6J
   - rank: 2
     asin: B0C2BHXF1W
     title: ChatGPT API 生成AIプログラミング入門
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/61VJUS43UxL._SY425_.jpg
     rating: 5
     point: AIとツール連携の技術的背景を理解
-    affiliateUrl: https://www.amazon.co.jp/ChatGPT%20API%20%E7%94%9F%E6%88%90AI%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%85%A5%E9%96%80/dp/B0C2BHXF1W?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/ChatGPT%20API%20%E7%94%9F%E6%88%90AI%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%85%A5%E9%96%80/dp/B0C2BHXF1W
   - rank: 3
     asin: B0C7VPP6K3
     title: "デザイン思考で未来を創る: 社会的課題に対する新しい視点と発想術 (実業AI文庫)"
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/61vedkZYdPL._SY522_.jpg
     rating: 5
     point: AI時代のクリエイティブ思考法を提示
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%80%9D%E8%80%83%E3%81%A7%E6%9C%AA%E6%9D%A5%E3%82%92%E5%89%B5%E3%82%8B%3A%20%E7%A4%BE%E4%BC%9A%E7%9A%84%E8%AA%B2%E9%A1%8C%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E6%96%B0%E3%81%97%E3%81%84%E8%A6%96%E7%82%B9%E3%81%A8%E7%99%BA%E6%83%B3%E8%A1%93%20(%E5%AE%9F%E6%A5%ADAI%E6%96%87%E5%BA%AB)/dp/B0C7VPP6K3?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%80%9D%E8%80%83%E3%81%A7%E6%9C%AA%E6%9D%A5%E3%82%92%E5%89%B5%E3%82%8B%3A%20%E7%A4%BE%E4%BC%9A%E7%9A%84%E8%AA%B2%E9%A1%8C%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E6%96%B0%E3%81%97%E3%81%84%E8%A6%96%E7%82%B9%E3%81%A8%E7%99%BA%E6%83%B3%E8%A1%93%20(%E5%AE%9F%E6%A5%ADAI%E6%96%87%E5%BA%AB)/dp/B0C7VPP6K3
   - rank: 4
     asin: B0FJW75H4F
     title: "美少女と学ぶコンテキストエンジニアリング実践ガイド: プロンプトエンジニアリングとの違いをやさしく学ぶAI活用入門書"
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/71YyvrWrtIL._SY466_.jpg
     rating: 5
     point: 自然言語で意図を伝える技術を習得
-    affiliateUrl: https://www.amazon.co.jp/%E7%BE%8E%E5%B0%91%E5%A5%B3%E3%81%A8%E5%AD%A6%E3%81%B6%E3%82%B3%E3%83%B3%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89%3A%20%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%A8%E3%81%AE%E9%81%95%E3%81%84%E3%82%92%E3%82%84%E3%81%95%E3%81%97%E3%81%8F%E5%AD%A6%E3%81%B6AI%E6%B4%BB%E7%94%A8%E5%85%A5%E9%96%80%E6%9B%B8/dp/B0FJW75H4F?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%BE%8E%E5%B0%91%E5%A5%B3%E3%81%A8%E5%AD%A6%E3%81%B6%E3%82%B3%E3%83%B3%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89%3A%20%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%A8%E3%81%AE%E9%81%95%E3%81%84%E3%82%92%E3%82%84%E3%81%95%E3%81%97%E3%81%8F%E5%AD%A6%E3%81%B6AI%E6%B4%BB%E7%94%A8%E5%85%A5%E9%96%80%E6%9B%B8/dp/B0FJW75H4F
 ruby: |-
   AdobeがPhotoshop、Express、AcrobatをChatGPTにネイティブ{統合|とうごう}し、チャット{上|じょう}から{無料|むりょう}で{本格的|ほんかくてき}な{画像|がぞう}{編集|へんしゅう}{機能|きのう}を{利用|りよう}できるようになりました。これまで{専門的|せんもんてき}なスキルが{必要|ひつよう}だった{画像|がぞう}{編集|へんしゅう}{作業|さぎょう}が、{自然言語|しぜんげんご}での{会話|かいわ}だけで{実現|じつげん}する{時代|じだい}が{到来|とうらい}したのです。
 

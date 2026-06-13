@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/81GWGQBNE+L._SY385_.jpg
     rating: 5
     point: AI開発ツールの基礎が学べる
-    affiliateUrl: https://www.amazon.co.jp/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E7%94%9F%E6%88%90AI%E5%85%A5%E9%96%80%20%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E7%94%9F%E6%88%90AI%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%81%8B%E3%82%89%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E9%96%8B%E7%99%BA%E3%81%BE%E3%81%A7/dp/B0G5XGFYJS?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E7%94%9F%E6%88%90AI%E5%85%A5%E9%96%80%20%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E7%94%9F%E6%88%90AI%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%81%8B%E3%82%89%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E9%96%8B%E7%99%BA%E3%81%BE%E3%81%A7/dp/B0G5XGFYJS
   - rank: 2
     asin: B0DHCYQFCS
     title: "Effective Python: 125 Specific Ways to Write Better Python (Effective Software Development Series) (English Edition)"
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/81eNxxP7MHL._SY385_.jpg
     rating: 5
     point: Python開発のベストプラクティス
-    affiliateUrl: https://www.amazon.co.jp/Effective%20Python%3A%20125%20Specific%20Ways%20to%20Write%20Better%20Python%20(Effective%20Software%20Development%20Series)%20(English%20Edition)/dp/B0DHCYQFCS?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/Effective%20Python%3A%20125%20Specific%20Ways%20to%20Write%20Better%20Python%20(Effective%20Software%20Development%20Series)%20(English%20Edition)/dp/B0DHCYQFCS
   - rank: 3
     asin: B0DPW38VVV
     title: 改訂新版　良いコード／悪いコードで学ぶ設計入門 ―保守しやすい　成長し続けるコードの書き方
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/81jRrINa7jL._SY425_.jpg
     rating: 5
     point: 自動化時代でも重要なコード品質
-    affiliateUrl: https://www.amazon.co.jp/%E6%94%B9%E8%A8%82%E6%96%B0%E7%89%88%E3%80%80%E8%89%AF%E3%81%84%E3%82%B3%E3%83%BC%E3%83%89%EF%BC%8F%E6%82%AA%E3%81%84%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A7%E5%AD%A6%E3%81%B6%E8%A8%AD%E8%A8%88%E5%85%A5%E9%96%80%20%E2%80%95%E4%BF%9D%E5%AE%88%E3%81%97%E3%82%84%E3%81%99%E3%81%84%E3%80%80%E6%88%90%E9%95%B7%E3%81%97%E7%B6%9A%E3%81%91%E3%82%8B%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9/dp/B0DPW38VVV?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E6%94%B9%E8%A8%82%E6%96%B0%E7%89%88%E3%80%80%E8%89%AF%E3%81%84%E3%82%B3%E3%83%BC%E3%83%89%EF%BC%8F%E6%82%AA%E3%81%84%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A7%E5%AD%A6%E3%81%B6%E8%A8%AD%E8%A8%88%E5%85%A5%E9%96%80%20%E2%80%95%E4%BF%9D%E5%AE%88%E3%81%97%E3%82%84%E3%81%99%E3%81%84%E3%80%80%E6%88%90%E9%95%B7%E3%81%97%E7%B6%9A%E3%81%91%E3%82%8B%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9/dp/B0DPW38VVV
   - rank: 4
     asin: B09LY8F34C
     title: ディープラーニングAIはどのように学習し、推論しているのか
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/8114+NC-JGL._SY425_.jpg
     rating: 5
     point: AI技術の基本原理を理解できる
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%87%E3%82%A3%E3%83%BC%E3%83%97%E3%83%A9%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0AI%E3%81%AF%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E5%AD%A6%E7%BF%92%E3%81%97%E3%80%81%E6%8E%A8%E8%AB%96%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%8B/dp/B09LY8F34C?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%87%E3%82%A3%E3%83%BC%E3%83%97%E3%83%A9%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0AI%E3%81%AF%E3%81%A9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AB%E5%AD%A6%E7%BF%92%E3%81%97%E3%80%81%E6%8E%A8%E8%AB%96%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%8B/dp/B09LY8F34C
   - rank: 5
     asin: B0DFFQ3WN9
     title: ソフトウェアファースト第２版　あらゆるビジネスを一変させる最強戦略
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/71IywU8unHL._SY425_.jpg
     rating: 5
     point: AI時代の開発戦略を考察
-    affiliateUrl: https://www.amazon.co.jp/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E7%AC%AC%EF%BC%92%E7%89%88%E3%80%80%E3%81%82%E3%82%89%E3%82%86%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%82%92%E4%B8%80%E5%A4%89%E3%81%95%E3%81%9B%E3%82%8B%E6%9C%80%E5%BC%B7%E6%88%A6%E7%95%A5/dp/B0DFFQ3WN9?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E7%AC%AC%EF%BC%92%E7%89%88%E3%80%80%E3%81%82%E3%82%89%E3%82%86%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%82%92%E4%B8%80%E5%A4%89%E3%81%95%E3%81%9B%E3%82%8B%E6%9C%80%E5%BC%B7%E6%88%A6%E7%95%A5/dp/B0DFFQ3WN9
 ruby: |-
   2026{年|ねん}、OpenAIがPython{開発|かいはつ}ツールで{注目|ちゅうもく}を{集|あつ}めるAstralを{買収|ばいしゅう}したことが{発表|はっぴょう}されました。RuffやuvといったPython{開発|かいはつ}{者|しゃ}に{愛用|あいよう}される{高速|こうそく}ツールを{擁|よう}するAstralの{技術|ぎじゅつ}は、OpenAIのプログラミング{支援|しえん}AI「Codex」に{統合|とうごう}され、{開発|かいはつ}ワークフロー{全体|ぜんたい}の{自動化|じどうか}を{目指|めざ}すとしています。
 

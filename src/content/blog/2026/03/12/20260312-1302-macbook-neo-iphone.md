@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/815qO-AiyUL._SY425_.jpg
     rating: 5
     point: Apple製品の教育戦略と価格政策を理解できる
-    affiliateUrl: https://www.amazon.co.jp/Apple%E3%81%AE%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E6%95%99%E8%82%B2/dp/4761274069?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/Apple%E3%81%AE%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E6%95%99%E8%82%B2/dp/4761274069
   - rank: 2
     asin: B0BP6HDZV2
     title: 半導体戦争――世界最重要テクノロジーをめぐる国家間の攻防
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/81OovyWy2cL._SY425_.jpg
     rating: 5
     point: チップ開発競争の歴史と未来が学べる名著
-    affiliateUrl: https://www.amazon.co.jp/%E5%8D%8A%E5%B0%8E%E4%BD%93%E6%88%A6%E4%BA%89%E2%80%95%E2%80%95%E4%B8%96%E7%95%8C%E6%9C%80%E9%87%8D%E8%A6%81%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%92%E3%82%81%E3%81%90%E3%82%8B%E5%9B%BD%E5%AE%B6%E9%96%93%E3%81%AE%E6%94%BB%E9%98%B2/dp/B0BP6HDZV2?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E5%8D%8A%E5%B0%8E%E4%BD%93%E6%88%A6%E4%BA%89%E2%80%95%E2%80%95%E4%B8%96%E7%95%8C%E6%9C%80%E9%87%8D%E8%A6%81%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC%E3%82%92%E3%82%81%E3%81%90%E3%82%8B%E5%9B%BD%E5%AE%B6%E9%96%93%E3%81%AE%E6%94%BB%E9%98%B2/dp/B0BP6HDZV2
   - rank: 3
     asin: B0798BNCYG
     title: プラットフォーム革命――経済を支配するビジネスモデルはどう機能し、どう作られるのか
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/91Yslr8LkZL._SY425_.jpg
     rating: 5
     point: エコシステム戦略の本質を解説
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E9%9D%A9%E5%91%BD%E2%80%95%E2%80%95%E7%B5%8C%E6%B8%88%E3%82%92%E6%94%AF%E9%85%8D%E3%81%99%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AF%E3%81%A9%E3%81%86%E6%A9%9F%E8%83%BD%E3%81%97%E3%80%81%E3%81%A9%E3%81%86%E4%BD%9C%E3%82%89%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B/dp/B0798BNCYG?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E9%9D%A9%E5%91%BD%E2%80%95%E2%80%95%E7%B5%8C%E6%B8%88%E3%82%92%E6%94%AF%E9%85%8D%E3%81%99%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AF%E3%81%A9%E3%81%86%E6%A9%9F%E8%83%BD%E3%81%97%E3%80%81%E3%81%A9%E3%81%86%E4%BD%9C%E3%82%89%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B/dp/B0798BNCYG
   - rank: 4
     asin: B095W6V5KG
     title: 破壊的イノベーションの起こし方―誰でも使えるアイデア創出フレームワーク
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/71IhruBMxjS._SY342_.jpg
     rating: 5
     point: 低価格市場参入の戦略理論を体系的に学べる
-    affiliateUrl: https://www.amazon.co.jp/%E7%A0%B4%E5%A3%8A%E7%9A%84%E3%82%A4%E3%83%8E%E3%83%99%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E3%81%93%E3%81%97%E6%96%B9%E2%80%95%E8%AA%B0%E3%81%A7%E3%82%82%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%A2%E3%82%A4%E3%83%87%E3%82%A2%E5%89%B5%E5%87%BA%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF/dp/B095W6V5KG?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%A0%B4%E5%A3%8A%E7%9A%84%E3%82%A4%E3%83%8E%E3%83%99%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E8%B5%B7%E3%81%93%E3%81%97%E6%96%B9%E2%80%95%E8%AA%B0%E3%81%A7%E3%82%82%E4%BD%BF%E3%81%88%E3%82%8B%E3%82%A2%E3%82%A4%E3%83%87%E3%82%A2%E5%89%B5%E5%87%BA%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF/dp/B095W6V5KG
   - rank: 5
     asin: B009GXM2AS
     title: スティーブ・ジョブズ　I
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/71Ur45sva-L._SY425_.jpg
     rating: 5
     point: Apple製品哲学の原点を知る必読書
-    affiliateUrl: https://www.amazon.co.jp/%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%96%E3%83%BB%E3%82%B8%E3%83%A7%E3%83%96%E3%82%BA%E3%80%80I/dp/B009GXM2AS?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%96%E3%83%BB%E3%82%B8%E3%83%A7%E3%83%96%E3%82%BA%E3%80%80I/dp/B009GXM2AS
 ruby: |-
   2026{年|ねん}、Appleが99,800{円|えん}という{破格|はかく}の{価格|かかく}で{新型|しんがた}「MacBook Neo」を{発売|はつばい}した。iPhone 16 Proと{同|おな}じA18 Proチップを{搭載|とうさい}しながらも10{万|まん}{円|えん}を{切|き}る{価格|かかく}{設定|せってい}で、{実機|じっき}レビューでは「{普通|ふつう}に{使|つか}える」{実力|じつりょく}が{確認|かくにん}され、{低|てい}{価格|かかく}Mac{市場|しじょう}に{革命|かくめい}をもたらす{製品|せいひん}として{大|おお}きな{注目|ちゅうもく}を{集|あつ}めている。
 

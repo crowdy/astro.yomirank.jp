@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/51fTqCvVDrL._SY445_SX342_QL70_ML2_.jpg
     rating: 5
     point: AI技術の最新動向と社会的影響を包括的に解説
-    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E3%83%91%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E5%85%AC%E5%BC%8F%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%20%E7%AC%AC%EF%BC%94%E7%89%88/dp/B0FSLLSV5V?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E3%83%91%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E5%85%AC%E5%BC%8F%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%20%E7%AC%AC%EF%BC%94%E7%89%88/dp/B0FSLLSV5V
   - rank: 2
     asin: B0CB25TNF2
     title: 大規模言語モデルは新たな知能か　ＣｈａｔＧＰＴが変えた世界 (岩波科学ライブラリー)
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/81SG9m6R4iL._SY425_.jpg
     rating: 5
     point: LLMの仕組みと可能性を哲学的視点から考察
-    affiliateUrl: https://www.amazon.co.jp/%E5%A4%A7%E8%A6%8F%E6%A8%A1%E8%A8%80%E8%AA%9E%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AF%E6%96%B0%E3%81%9F%E3%81%AA%E7%9F%A5%E8%83%BD%E3%81%8B%E3%80%80%EF%BC%A3%EF%BD%88%EF%BD%81%EF%BD%94%EF%BC%A7%EF%BC%B0%EF%BC%B4%E3%81%8C%E5%A4%89%E3%81%88%E3%81%9F%E4%B8%96%E7%95%8C%20(%E5%B2%A9%E6%B3%A2%E7%A7%91%E5%AD%A6%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%83%BC)/dp/B0CB25TNF2?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E5%A4%A7%E8%A6%8F%E6%A8%A1%E8%A8%80%E8%AA%9E%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AF%E6%96%B0%E3%81%9F%E3%81%AA%E7%9F%A5%E8%83%BD%E3%81%8B%E3%80%80%EF%BC%A3%EF%BD%88%EF%BD%81%EF%BD%94%EF%BC%A7%EF%BC%B0%EF%BC%B4%E3%81%8C%E5%A4%89%E3%81%88%E3%81%9F%E4%B8%96%E7%95%8C%20(%E5%B2%A9%E6%B3%A2%E7%A7%91%E5%AD%A6%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%83%BC)/dp/B0CB25TNF2
   - rank: 3
     asin: B09JVN5Q9J
     title: オープンソースの教科書
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/71LeLwYCS8L._SY425_.jpg
     rating: 5
     point: オープンモデルの実装方法を実践的に学べる
-    affiliateUrl: https://www.amazon.co.jp/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8/dp/B09JVN5Q9J?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8/dp/B09JVN5Q9J
   - rank: 4
     asin: B0CYCLWMKR
     title: Claude3 API マルチモーダル生成AIプログラミング入門
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/71IZFy166EL._SY425_.jpg
     rating: 5
     point: 動画・音声処理技術の基礎から応用まで網羅
-    affiliateUrl: https://www.amazon.co.jp/Claude3%20API%20%E3%83%9E%E3%83%AB%E3%83%81%E3%83%A2%E3%83%BC%E3%83%80%E3%83%AB%E7%94%9F%E6%88%90AI%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%85%A5%E9%96%80/dp/B0CYCLWMKR?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/Claude3%20API%20%E3%83%9E%E3%83%AB%E3%83%81%E3%83%A2%E3%83%BC%E3%83%80%E3%83%AB%E7%94%9F%E6%88%90AI%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%85%A5%E9%96%80/dp/B0CYCLWMKR
   - rank: 5
     asin: B0GNH4BHV1
     title: "仕様駆動開発 実践ガイド: AIエージェントで実践する仕様駆動開発"
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/61hOxXtH1RL._SY522_.jpg
     rating: 5
     point: 自律エージェントの設計手法を具体例で解説
-    affiliateUrl: https://www.amazon.co.jp/%E4%BB%95%E6%A7%98%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA%20%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89%3A%20AI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%A7%E5%AE%9F%E8%B7%B5%E3%81%99%E3%82%8B%E4%BB%95%E6%A7%98%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA/dp/B0GNH4BHV1?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E4%BB%95%E6%A7%98%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA%20%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89%3A%20AI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%A7%E5%AE%9F%E8%B7%B5%E3%81%99%E3%82%8B%E4%BB%95%E6%A7%98%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA/dp/B0GNH4BHV1
 ruby: |-
   2026{年|ねん}4{月|がつ}2{日|にち}、Googleがオープンモデルの{最新|さいしん}LLM「Gemma 4」を{発表|はっぴょう}しました。{動画|どうが}・{音声|おんせい}{対応|たいおう}への{大幅|おおはば}{強化|きょうか}と、ライセンスを{独自形式|どくじけいしき}から{商用利用|しょうようりよう}に{寛容|かんよう}なApache 2.0へ{変更|へんこう}したことが{大|おお}きな{話題|わだい}となっています。この{発表|はっぴょう}は、オープンAI{分野|ぶんや}における{重要|じゅうよう}な{転換点|てんかんてん}として{注目|ちゅうもく}を{集|あつ}めています。
 

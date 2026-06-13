@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/71EpZ-u3rBL._SY425_.jpg
     rating: 5
     point: AIサービスの法的リスクを実務的に解説
-    affiliateUrl: https://www.amazon.co.jp/AI%E3%83%BB%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%AE%E6%B3%95%E5%BE%8B%E5%AE%9F%E5%8B%99Q%EF%BC%86A/dp/B08L4G3G8L?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%E3%83%BB%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%AE%E6%B3%95%E5%BE%8B%E5%AE%9F%E5%8B%99Q%EF%BC%86A/dp/B08L4G3G8L
   - rank: 2
     asin: B0BVVJGX1K
     title: 資本主義の次に来る世界
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/71geqbLrOaL._SY425_.jpg
     rating: 5
     point: デジタルプラットフォームの経済構造を分析
-    affiliateUrl: https://www.amazon.co.jp/%E8%B3%87%E6%9C%AC%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%AC%A1%E3%81%AB%E6%9D%A5%E3%82%8B%E4%B8%96%E7%95%8C/dp/B0BVVJGX1K?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E8%B3%87%E6%9C%AC%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%AC%A1%E3%81%AB%E6%9D%A5%E3%82%8B%E4%B8%96%E7%95%8C/dp/B0BVVJGX1K
   - rank: 3
     asin: B093KFTV53
     title: 監視資本主義―人類の未来を賭けた闘い
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/71zfbDLOFgS._SY425_.jpg
     rating: 5
     point: データ所有権の本質的問題を考察
-    affiliateUrl: https://www.amazon.co.jp/%E7%9B%A3%E8%A6%96%E8%B3%87%E6%9C%AC%E4%B8%BB%E7%BE%A9%E2%80%95%E4%BA%BA%E9%A1%9E%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%82%92%E8%B3%AD%E3%81%91%E3%81%9F%E9%97%98%E3%81%84/dp/B093KFTV53?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%9B%A3%E8%A6%96%E8%B3%87%E6%9C%AC%E4%B8%BB%E7%BE%A9%E2%80%95%E4%BA%BA%E9%A1%9E%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%82%92%E8%B3%AD%E3%81%91%E3%81%9F%E9%97%98%E3%81%84/dp/B093KFTV53
   - rank: 4
     asin: B0FQ5HSSHS
     title: AIガバナンス実践ガイド：リスクを機会に変える経営戦略 AI×業務効率化がわかる本
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/61tfBE5AzbL._SY466_.jpg
     rating: 5
     point: AI開発におけるコンプライアンス体制
-    affiliateUrl: https://www.amazon.co.jp/AI%E3%82%AC%E3%83%90%E3%83%8A%E3%83%B3%E3%82%B9%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89%EF%BC%9A%E3%83%AA%E3%82%B9%E3%82%AF%E3%82%92%E6%A9%9F%E4%BC%9A%E3%81%AB%E5%A4%89%E3%81%88%E3%82%8B%E7%B5%8C%E5%96%B6%E6%88%A6%E7%95%A5%20AI%C3%97%E6%A5%AD%E5%8B%99%E5%8A%B9%E7%8E%87%E5%8C%96%E3%81%8C%E3%82%8F%E3%81%8B%E3%82%8B%E6%9C%AC/dp/B0FQ5HSSHS?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%E3%82%AC%E3%83%90%E3%83%8A%E3%83%B3%E3%82%B9%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89%EF%BC%9A%E3%83%AA%E3%82%B9%E3%82%AF%E3%82%92%E6%A9%9F%E4%BC%9A%E3%81%AB%E5%A4%89%E3%81%88%E3%82%8B%E7%B5%8C%E5%96%B6%E6%88%A6%E7%95%A5%20AI%C3%97%E6%A5%AD%E5%8B%99%E5%8A%B9%E7%8E%87%E5%8C%96%E3%81%8C%E3%82%8F%E3%81%8B%E3%82%8B%E6%9C%AC/dp/B0FQ5HSSHS
   - rank: 5
     asin: B091H7NGRM
     title: 競争政策の経済学　人口減少・デジタル化・産業政策 (日本経済新聞出版)
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/81crH83vuoL._SY466_.jpg
     rating: 5
     point: プラットフォーム規制の最新動向を網羅
-    affiliateUrl: https://www.amazon.co.jp/%E7%AB%B6%E4%BA%89%E6%94%BF%E7%AD%96%E3%81%AE%E7%B5%8C%E6%B8%88%E5%AD%A6%E3%80%80%E4%BA%BA%E5%8F%A3%E6%B8%9B%E5%B0%91%E3%83%BB%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%8C%96%E3%83%BB%E7%94%A3%E6%A5%AD%E6%94%BF%E7%AD%96%20(%E6%97%A5%E6%9C%AC%E7%B5%8C%E6%B8%88%E6%96%B0%E8%81%9E%E5%87%BA%E7%89%88)/dp/B091H7NGRM?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%AB%B6%E4%BA%89%E6%94%BF%E7%AD%96%E3%81%AE%E7%B5%8C%E6%B8%88%E5%AD%A6%E3%80%80%E4%BA%BA%E5%8F%A3%E6%B8%9B%E5%B0%91%E3%83%BB%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%8C%96%E3%83%BB%E7%94%A3%E6%A5%AD%E6%94%BF%E7%AD%96%20(%E6%97%A5%E6%9C%AC%E7%B5%8C%E6%B8%88%E6%96%B0%E8%81%9E%E5%87%BA%E7%89%88)/dp/B091H7NGRM
 ruby: |-
   2026{年|ねん}、カリフォルニア{州|しゅう}{連邦|れんぽう}{地方裁判所|ちほうさいばんしょ}がPerplexityのAI{搭載|とうさい}ウェブブラウザ「Comet」に{対|たい}し、Amazonのパスワード{保護|ほご}システムへのアクセス{禁止|きんし}{命令|めいれい}を{下|くだ}しました。ユーザーの{代|か}わりに{自動|じどう}で{買|か}い{物|もの}ができる{革新的|かくしんてき}な{機能|きのう}が、Amazonのデータ{無断|むだん}{利用|りよう}として{法的|ほうてき}{問題|もんだい}に{発展|はってん}し、{取得|しゅとく}データの{破棄|はき}も{義務付|ぎむづ}けられる{事態|じたい}となっています。
 

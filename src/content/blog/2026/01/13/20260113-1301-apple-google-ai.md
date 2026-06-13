@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/71+xkOUDhfL._SY425_.jpg
     rating: 5
     point: 巨大テック企業の戦略と競争構造を分析
-    affiliateUrl: https://www.amazon.co.jp/the%20four%20GAFA%E3%80%80%E5%9B%9B%E9%A8%8E%E5%A3%AB%E3%81%8C%E5%89%B5%E3%82%8A%E5%A4%89%E3%81%88%E3%81%9F%E4%B8%96%E7%95%8C/dp/B07DNCCG5Q?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/the%20four%20GAFA%E3%80%80%E5%9B%9B%E9%A8%8E%E5%A3%AB%E3%81%8C%E5%89%B5%E3%82%8A%E5%A4%89%E3%81%88%E3%81%9F%E4%B8%96%E7%95%8C/dp/B07DNCCG5Q
   - rank: 2
     asin: B0BNQ267HX
     title: AI 2041　人工知能が変える20年後の未来 (文春e-book)
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/91ghsN+ts6L._SY425_.jpg
     rating: 5
     point: AIがもたらす未来社会の具体的シナリオ
-    affiliateUrl: https://www.amazon.co.jp/AI%202041%E3%80%80%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%8C%E5%A4%89%E3%81%88%E3%82%8B20%E5%B9%B4%E5%BE%8C%E3%81%AE%E6%9C%AA%E6%9D%A5%20(%E6%96%87%E6%98%A5e-book)/dp/B0BNQ267HX?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%202041%E3%80%80%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%8C%E5%A4%89%E3%81%88%E3%82%8B20%E5%B9%B4%E5%BE%8C%E3%81%AE%E6%9C%AA%E6%9D%A5%20(%E6%96%87%E6%98%A5e-book)/dp/B0BNQ267HX
   - rank: 3
     asin: B096X6BHS8
     title: プライバシーという権利　個人情報はなぜ守られるべきか (岩波新書)
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/61ziC8pUVKS._SY522_.jpg
     rating: 5
     point: AI時代のデータとプライバシー問題の本質
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%A8%E3%81%84%E3%81%86%E6%A8%A9%E5%88%A9%E3%80%80%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%81%AF%E3%81%AA%E3%81%9C%E5%AE%88%E3%82%89%E3%82%8C%E3%82%8B%E3%81%B9%E3%81%8D%E3%81%8B%20(%E5%B2%A9%E6%B3%A2%E6%96%B0%E6%9B%B8)/dp/B096X6BHS8?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%A8%E3%81%84%E3%81%86%E6%A8%A9%E5%88%A9%E3%80%80%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%81%AF%E3%81%AA%E3%81%9C%E5%AE%88%E3%82%89%E3%82%8C%E3%82%8B%E3%81%B9%E3%81%8D%E3%81%8B%20(%E5%B2%A9%E6%B3%A2%E6%96%B0%E6%9B%B8)/dp/B096X6BHS8
 ruby: |-
   AppleとGoogleが{複数年|ふくすうねん}にわたるAI{提携契約|ていけいけいやく}を{締結|ていけつ}し、AppleのSiriやApple IntelligenceにGoogleのGeminiとクラウド{技術|ぎじゅつ}が{採用|さいよう}されることが{発表|はっぴょう}された。{年内|ねんない}にも、よりパーソナライズされた{新|あたら}しいSiriが{登場|とうじょう}する{予定|よてい}だ。
 

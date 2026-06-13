@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/91rn6pHakhL._SY385_.jpg
     rating: 5
     point: CDNとエッジインフラの基本を体系的に学べる
-    affiliateUrl: https://www.amazon.co.jp/AWS%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%E6%A7%8B%E7%AF%89%E5%85%A5%E9%96%80%20%E7%AC%AC2%E7%89%88%20%E5%AE%89%E5%85%A8%E3%81%A7%E5%A0%85%E7%89%A2%E3%81%AA%E6%9C%AC%E7%95%AA%E7%92%B0%E5%A2%83%E3%81%AE%E3%81%A4%E3%81%8F%E3%82%8A%E6%96%B9/dp/B0BN9XD2NQ?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AWS%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9%E6%A7%8B%E7%AF%89%E5%85%A5%E9%96%80%20%E7%AC%AC2%E7%89%88%20%E5%AE%89%E5%85%A8%E3%81%A7%E5%A0%85%E7%89%A2%E3%81%AA%E6%9C%AC%E7%95%AA%E7%92%B0%E5%A2%83%E3%81%AE%E3%81%A4%E3%81%8F%E3%82%8A%E6%96%B9/dp/B0BN9XD2NQ
   - rank: 2
     asin: B07DVY4H3M
     title: 体系的に学ぶ 安全なWebアプリケーションの作り方 第2版［固定版］　脆弱性が生まれる原理と対策の実践
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/81r7dRPQLwL._SY385_.jpg
     rating: 5
     point: エッジ環境でのセキュリティ考慮事項を理解
-    affiliateUrl: https://www.amazon.co.jp/%E4%BD%93%E7%B3%BB%E7%9A%84%E3%81%AB%E5%AD%A6%E3%81%B6%20%E5%AE%89%E5%85%A8%E3%81%AAWeb%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9%20%E7%AC%AC2%E7%89%88%EF%BC%BB%E5%9B%BA%E5%AE%9A%E7%89%88%EF%BC%BD%E3%80%80%E8%84%86%E5%BC%B1%E6%80%A7%E3%81%8C%E7%94%9F%E3%81%BE%E3%82%8C%E3%82%8B%E5%8E%9F%E7%90%86%E3%81%A8%E5%AF%BE%E7%AD%96%E3%81%AE%E5%AE%9F%E8%B7%B5/dp/B07DVY4H3M?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E4%BD%93%E7%B3%BB%E7%9A%84%E3%81%AB%E5%AD%A6%E3%81%B6%20%E5%AE%89%E5%85%A8%E3%81%AAWeb%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9%20%E7%AC%AC2%E7%89%88%EF%BC%BB%E5%9B%BA%E5%AE%9A%E7%89%88%EF%BC%BD%E3%80%80%E8%84%86%E5%BC%B1%E6%80%A7%E3%81%8C%E7%94%9F%E3%81%BE%E3%82%8C%E3%82%8B%E5%8E%9F%E7%90%86%E3%81%A8%E5%AF%BE%E7%AD%96%E3%81%AE%E5%AE%9F%E8%B7%B5/dp/B07DVY4H3M
 ruby: |-
   CloudflareがオープンソースのWebフレームワーク「Astro」を{買収|ばいしゅう}したことが{発表|はっぴょう}された。Astroは{高速|こうそく}なWebページ{作成|さくせい}で{注目|ちゅうもく}を{集|あつ}めており、{買収後|ばいしゅうご}もオープンソースとして{継続|けいぞく}することが{明言|めいげん}されている。
 

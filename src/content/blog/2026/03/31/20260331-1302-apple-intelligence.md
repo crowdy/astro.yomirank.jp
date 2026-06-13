@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/81a1XU9VNzL._SY425_.jpg
     rating: 5
     point: 中国の技術規制体制を包括的に解説
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%86%E3%83%B3%E3%82%BB%E3%83%B3%E3%83%88%20%E7%9F%A5%E3%82%89%E3%82%8C%E3%81%96%E3%82%8B%E4%B8%AD%E5%9B%BD%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E9%9D%A9%E5%91%BD%E3%83%88%E3%83%83%E3%83%97%E3%83%A9%E3%83%B3%E3%83%8A%E3%83%BC%E3%81%AE%E5%85%A8%E8%B2%8C/dp/4833423375?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%86%E3%83%B3%E3%82%BB%E3%83%B3%E3%83%88%20%E7%9F%A5%E3%82%89%E3%82%8C%E3%81%96%E3%82%8B%E4%B8%AD%E5%9B%BD%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E9%9D%A9%E5%91%BD%E3%83%88%E3%83%83%E3%83%97%E3%83%A9%E3%83%B3%E3%83%8A%E3%83%BC%E3%81%AE%E5%85%A8%E8%B2%8C/dp/4833423375
   - rank: 2
     asin: B0FKB6J53C
     title: "10分でサクッとわかるAI推進法: 生成AI・ChatGPT時代に備える　AI基本法（AI新法）のしくみと企業のリスク対応・実務ポイント入門"
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/610dJvxDcbL._SY425_.jpg
     rating: 5
     point: AI展開時の法令遵守の実践手法
-    affiliateUrl: https://www.amazon.co.jp/10%E5%88%86%E3%81%A7%E3%82%B5%E3%82%AF%E3%83%83%E3%81%A8%E3%82%8F%E3%81%8B%E3%82%8BAI%E6%8E%A8%E9%80%B2%E6%B3%95%3A%20%E7%94%9F%E6%88%90AI%E3%83%BBChatGPT%E6%99%82%E4%BB%A3%E3%81%AB%E5%82%99%E3%81%88%E3%82%8B%E3%80%80AI%E5%9F%BA%E6%9C%AC%E6%B3%95%EF%BC%88AI%E6%96%B0%E6%B3%95%EF%BC%89%E3%81%AE%E3%81%97%E3%81%8F%E3%81%BF%E3%81%A8%E4%BC%81%E6%A5%AD%E3%81%AE%E3%83%AA%E3%82%B9%E3%82%AF%E5%AF%BE%E5%BF%9C%E3%83%BB%E5%AE%9F%E5%8B%99%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E5%85%A5%E9%96%80/dp/B0FKB6J53C?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/10%E5%88%86%E3%81%A7%E3%82%B5%E3%82%AF%E3%83%83%E3%81%A8%E3%82%8F%E3%81%8B%E3%82%8BAI%E6%8E%A8%E9%80%B2%E6%B3%95%3A%20%E7%94%9F%E6%88%90AI%E3%83%BBChatGPT%E6%99%82%E4%BB%A3%E3%81%AB%E5%82%99%E3%81%88%E3%82%8B%E3%80%80AI%E5%9F%BA%E6%9C%AC%E6%B3%95%EF%BC%88AI%E6%96%B0%E6%B3%95%EF%BC%89%E3%81%AE%E3%81%97%E3%81%8F%E3%81%BF%E3%81%A8%E4%BC%81%E6%A5%AD%E3%81%AE%E3%83%AA%E3%82%B9%E3%82%AF%E5%AF%BE%E5%BF%9C%E3%83%BB%E5%AE%9F%E5%8B%99%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E5%85%A5%E9%96%80/dp/B0FKB6J53C
   - rank: 3
     asin: B085PQFY2W
     title: デジタル国富論
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/613QSlb-ZpL._SY425_.jpg
     rating: 5
     point: データと国家主権の新しい関係を考察
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%9B%BD%E5%AF%8C%E8%AB%96/dp/B085PQFY2W?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E5%9B%BD%E5%AF%8C%E8%AB%96/dp/B085PQFY2W
 ruby: |-
   2026{年|ねん}3{月|つき}31{日|にち}、Appleが{中国|ちゅうごく}で{予期|よき}せぬ{事態|じたい}を{引|ひ}き{起|お}こした。{同社|どうしゃ}のAI{機能|きのう}「Apple Intelligence」が、{中国|ちゅうごく}の{規制|きせい}{当局|とうきょく}による{承認|しょうにん}を{受|う}ける{前|まえ}に、{誤|あやま}って{中国|ちゅうごく}のユーザー{向|む}けに{提供|ていきょう}{開始|かいし}されたのだ。{唯一|ゆいいつ}この{機能|きのう}が{利用|りよう}できなかった{地域|ちいき}である{中国|ちゅうごく}で、{予告|よこく}なしに{突如|とつじょ}としてサービスが{開始|かいし}され、{大|おお}きな{波紋|はもん}を{呼|よ}んでいる。
 

@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/615pWO-jKRL._SY425_.jpg
     rating: 5
     point: 内部情報管理と人的リスク対策の具体的手法を提示
-    affiliateUrl: https://www.amazon.co.jp/%E5%80%8B%E4%BA%BA%EF%BC%86%E4%BC%81%E6%A5%AD%E6%83%85%E5%A0%B1%E3%81%AE%E4%BF%9D%E8%AD%B7%E5%AF%BE%E7%AD%96/dp/B09HKHY34Z?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E5%80%8B%E4%BA%BA%EF%BC%86%E4%BC%81%E6%A5%AD%E6%83%85%E5%A0%B1%E3%81%AE%E4%BF%9D%E8%AD%B7%E5%AF%BE%E7%AD%96/dp/B09HKHY34Z
   - rank: 2
     asin: B0G3L77ZZ5
     title: α世代に日本の学校はどうなるのか AIネイティブの時代に 学校と大学は生き残れるか
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/61azW0r29HL._SY425_.jpg
     rating: 5
     point: AI規制の国際的動向と法的課題をわかりやすく整理
-    affiliateUrl: https://www.amazon.co.jp/%CE%B1%E4%B8%96%E4%BB%A3%E3%81%AB%E6%97%A5%E6%9C%AC%E3%81%AE%E5%AD%A6%E6%A0%A1%E3%81%AF%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B%E3%81%AE%E3%81%8B%20AI%E3%83%8D%E3%82%A4%E3%83%86%E3%82%A3%E3%83%96%E3%81%AE%E6%99%82%E4%BB%A3%E3%81%AB%20%E5%AD%A6%E6%A0%A1%E3%81%A8%E5%A4%A7%E5%AD%A6%E3%81%AF%E7%94%9F%E3%81%8D%E6%AE%8B%E3%82%8C%E3%82%8B%E3%81%8B/dp/B0G3L77ZZ5?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%CE%B1%E4%B8%96%E4%BB%A3%E3%81%AB%E6%97%A5%E6%9C%AC%E3%81%AE%E5%AD%A6%E6%A0%A1%E3%81%AF%E3%81%A9%E3%81%86%E3%81%AA%E3%82%8B%E3%81%AE%E3%81%8B%20AI%E3%83%8D%E3%82%A4%E3%83%86%E3%82%A3%E3%83%96%E3%81%AE%E6%99%82%E4%BB%A3%E3%81%AB%20%E5%AD%A6%E6%A0%A1%E3%81%A8%E5%A4%A7%E5%AD%A6%E3%81%AF%E7%94%9F%E3%81%8D%E6%AE%8B%E3%82%8C%E3%82%8B%E3%81%8B/dp/B0G3L77ZZ5
   - rank: 3
     asin: B0CVMT77LF
     title: 第六版 大学講義 技術者の倫理 入門
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/71uVT3bHU2L._SY425_.jpg
     rating: 5
     point: AI開発者が知るべき責任と倫理的判断基準を明示
-    affiliateUrl: https://www.amazon.co.jp/%E7%AC%AC%E5%85%AD%E7%89%88%20%E5%A4%A7%E5%AD%A6%E8%AC%9B%E7%BE%A9%20%E6%8A%80%E8%A1%93%E8%80%85%E3%81%AE%E5%80%AB%E7%90%86%20%E5%85%A5%E9%96%80/dp/B0CVMT77LF?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%AC%AC%E5%85%AD%E7%89%88%20%E5%A4%A7%E5%AD%A6%E8%AC%9B%E7%BE%A9%20%E6%8A%80%E8%A1%93%E8%80%85%E3%81%AE%E5%80%AB%E7%90%86%20%E5%85%A5%E9%96%80/dp/B0CVMT77LF
 ruby: |-
   2026{年|ねん}{初頭|しょとう}、Anthropic{社|しゃ}の{未発表|みはっぴょう}AIモデル「Claude Mythos」に{関|かん}する{内部|ないぶ}{文書|ぶんしょ}が{外部|がいぶ}に{流出|りゅうしゅつ}し、{技術|ぎじゅつ}{業界|ぎょうかい}に{衝撃|しょうげき}が{走|はし}った。{同|どう}モデルは{既存|きそん}システムを{凌駕|りょうが}するサイバー{攻撃|こうげき}{能力|のうりょく}を{持|も}つとされ、AI{開発|かいはつ}における{安全性|あんぜんせい}{管理|かんり}の{課題|かだい}が{改|あらた}めて{浮|う}き{彫|ぼ}りになっている。
 

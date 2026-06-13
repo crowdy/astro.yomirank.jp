@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/71D1RcxfJfL._SY466_.jpg
     rating: 5
     point: ロボット普及の社会的影響を包括的に分析
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%AE%E8%84%85%E5%A8%81%20%E4%BA%BA%E3%81%AE%E4%BB%95%E4%BA%8B%E3%81%8C%E3%81%AA%E3%81%8F%E3%81%AA%E3%82%8B%E6%97%A5%20(%E6%97%A5%E7%B5%8C%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E4%BA%BA%E6%96%87%E5%BA%AB)/dp/4532198615?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%AE%E8%84%85%E5%A8%81%20%E4%BA%BA%E3%81%AE%E4%BB%95%E4%BA%8B%E3%81%8C%E3%81%AA%E3%81%8F%E3%81%AA%E3%82%8B%E6%97%A5%20(%E6%97%A5%E7%B5%8C%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E4%BA%BA%E6%96%87%E5%BA%AB)/dp/4532198615
   - rank: 2
     asin: B01IGUA00K
     title: 人工知能と経済の未来　2030年雇用大崩壊 (文春新書)
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/713XE2irWtL._SY466_.jpg
     rating: 5
     point: AIとロボットが変える労働市場を経済学的に考察
-    affiliateUrl: https://www.amazon.co.jp/%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%A8%E7%B5%8C%E6%B8%88%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%80%802030%E5%B9%B4%E9%9B%87%E7%94%A8%E5%A4%A7%E5%B4%A9%E5%A3%8A%20(%E6%96%87%E6%98%A5%E6%96%B0%E6%9B%B8)/dp/B01IGUA00K?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%A8%E7%B5%8C%E6%B8%88%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%80%802030%E5%B9%B4%E9%9B%87%E7%94%A8%E5%A4%A7%E5%B4%A9%E5%A3%8A%20(%E6%96%87%E6%98%A5%E6%96%B0%E6%9B%B8)/dp/B01IGUA00K
   - rank: 3
     asin: B00APR9CCU
     title: ロボットとは何か　人の心を映す鏡 (講談社現代新書)
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/81X31uMQr0L._SY522_.jpg
     rating: 5
     point: 日本のロボット研究の第一人者による技術解説
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E3%80%80%E4%BA%BA%E3%81%AE%E5%BF%83%E3%82%92%E6%98%A0%E3%81%99%E9%8F%A1%20(%E8%AC%9B%E8%AB%87%E7%A4%BE%E7%8F%BE%E4%BB%A3%E6%96%B0%E6%9B%B8)/dp/B00APR9CCU?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B%E3%80%80%E4%BA%BA%E3%81%AE%E5%BF%83%E3%82%92%E6%98%A0%E3%81%99%E9%8F%A1%20(%E8%AC%9B%E8%AB%87%E7%A4%BE%E7%8F%BE%E4%BB%A3%E6%96%B0%E6%9B%B8)/dp/B00APR9CCU
   - rank: 4
     asin: B09SH172TC
     title: スマートシンキングで進める工場変革　つながる製造業の現場改善とITカイゼン
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/81tCvKkskEL._SY425_.jpg
     rating: 5
     point: 製造業のデジタル化とロボット活用を実践的に紹介
-    affiliateUrl: https://www.amazon.co.jp/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B7%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%A7%E9%80%B2%E3%82%81%E3%82%8B%E5%B7%A5%E5%A0%B4%E5%A4%89%E9%9D%A9%E3%80%80%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8B%E8%A3%BD%E9%80%A0%E6%A5%AD%E3%81%AE%E7%8F%BE%E5%A0%B4%E6%94%B9%E5%96%84%E3%81%A8IT%E3%82%AB%E3%82%A4%E3%82%BC%E3%83%B3/dp/B09SH172TC?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B7%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%A7%E9%80%B2%E3%82%81%E3%82%8B%E5%B7%A5%E5%A0%B4%E5%A4%89%E9%9D%A9%E3%80%80%E3%81%A4%E3%81%AA%E3%81%8C%E3%82%8B%E8%A3%BD%E9%80%A0%E6%A5%AD%E3%81%AE%E7%8F%BE%E5%A0%B4%E6%94%B9%E5%96%84%E3%81%A8IT%E3%82%AB%E3%82%A4%E3%82%BC%E3%83%B3/dp/B09SH172TC
   - rank: 5
     asin: "4501543809"
     title: 人とロボットの〈間〉をデザインする
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/71ejmMu-Y3S._SY425_.jpg
     rating: 5
     point: 人間とロボットの協働関係を設計する視点を提供
-    affiliateUrl: https://www.amazon.co.jp/%E4%BA%BA%E3%81%A8%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%AE%E3%80%88%E9%96%93%E3%80%89%E3%82%92%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%99%E3%82%8B/dp/4501543809?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E4%BA%BA%E3%81%A8%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%AE%E3%80%88%E9%96%93%E3%80%89%E3%82%92%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%99%E3%82%8B/dp/4501543809
 ruby: |-
   Boston Dynamicsが{長年|ながねん}{開発|かいはつ}を{続|つづ}けてきた{人型|ひとがた}ロボット「Atlas」の{商用化|しょうようか}を{発表|はっぴょう}し、{米国|べいこく}ボストンの{工場|こうじょう}での{生産|せいさん}を{開始|かいし}、{自動車工場|じどうしゃこうじょう}などへの{導入|どうにゅう}が{始|はじ}まった。{研究開発|けんきゅうかいはつ}の{域|いき}を{超|こ}え、ついに{実用段階|じつようだんかい}に{入|はい}った{人型|ひとがた}ロボットは、{産業界|さんぎょうかい}に{革命|かくめい}をもたらそうとしている。
 

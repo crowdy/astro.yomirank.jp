@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/71X6iUaiP5L._SY425_.jpg
     rating: 5
     point: AI企業の競争戦略と買収事例を体系的に解説
-    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E6%99%82%E4%BB%A3%E3%81%AE%E6%96%B0PR%E8%AB%96%E3%80%80%E3%80%8C%E6%B0%B4%E5%B9%B3%E7%B5%B1%E5%90%88%E5%9E%8B%E5%BA%83%E5%A0%B1%E3%80%8D%E3%81%A8%E3%81%84%E3%81%86%E4%BC%81%E6%A5%AD%E3%81%AE%E7%94%9F%E5%AD%98%E6%88%A6%E7%95%A5%20%E3%83%99%E3%82%B9%E3%83%88%E3%82%BB%E3%83%AC%E3%82%AF%E3%83%88/dp/B0FZF4JP6G?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E6%99%82%E4%BB%A3%E3%81%AE%E6%96%B0PR%E8%AB%96%E3%80%80%E3%80%8C%E6%B0%B4%E5%B9%B3%E7%B5%B1%E5%90%88%E5%9E%8B%E5%BA%83%E5%A0%B1%E3%80%8D%E3%81%A8%E3%81%84%E3%81%86%E4%BC%81%E6%A5%AD%E3%81%AE%E7%94%9F%E5%AD%98%E6%88%A6%E7%95%A5%20%E3%83%99%E3%82%B9%E3%83%88%E3%82%BB%E3%83%AC%E3%82%AF%E3%83%88/dp/B0FZF4JP6G
   - rank: 2
     asin: B0798BNCYG
     title: プラットフォーム革命――経済を支配するビジネスモデルはどう機能し、どう作られるのか
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/91Yslr8LkZL._SY425_.jpg
     rating: 5
     point: エコシステム構築の成功パターンを分析
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E9%9D%A9%E5%91%BD%E2%80%95%E2%80%95%E7%B5%8C%E6%B8%88%E3%82%92%E6%94%AF%E9%85%8D%E3%81%99%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AF%E3%81%A9%E3%81%86%E6%A9%9F%E8%83%BD%E3%81%97%E3%80%81%E3%81%A9%E3%81%86%E4%BD%9C%E3%82%89%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B/dp/B0798BNCYG?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E9%9D%A9%E5%91%BD%E2%80%95%E2%80%95%E7%B5%8C%E6%B8%88%E3%82%92%E6%94%AF%E9%85%8D%E3%81%99%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AF%E3%81%A9%E3%81%86%E6%A9%9F%E8%83%BD%E3%81%97%E3%80%81%E3%81%A9%E3%81%86%E4%BD%9C%E3%82%89%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B/dp/B0798BNCYG
   - rank: 3
     asin: B0D1GGBP7H
     title: "フロントエンド開発のためのJavaScript最新テクニック : ES6以降の新機能やベストプラクティスを使って、洗練されたフロントエンドアプリケーションを開発しよう！"
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/715PuUF4kZL._SY522_.jpg
     rating: 5
     point: JavaScriptランタイムの技術的背景を理解
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E9%96%8B%E7%99%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEJavaScript%E6%9C%80%E6%96%B0%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF%20%3A%20ES6%E4%BB%A5%E9%99%8D%E3%81%AE%E6%96%B0%E6%A9%9F%E8%83%BD%E3%82%84%E3%83%99%E3%82%B9%E3%83%88%E3%83%97%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%82%B9%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%80%81%E6%B4%97%E7%B7%B4%E3%81%95%E3%82%8C%E3%81%9F%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E9%96%8B%E7%99%BA%E3%81%97%E3%82%88%E3%81%86%EF%BC%81/dp/B0D1GGBP7H?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E9%96%8B%E7%99%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AEJavaScript%E6%9C%80%E6%96%B0%E3%83%86%E3%82%AF%E3%83%8B%E3%83%83%E3%82%AF%20%3A%20ES6%E4%BB%A5%E9%99%8D%E3%81%AE%E6%96%B0%E6%A9%9F%E8%83%BD%E3%82%84%E3%83%99%E3%82%B9%E3%83%88%E3%83%97%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%82%B9%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%80%81%E6%B4%97%E7%B7%B4%E3%81%95%E3%82%8C%E3%81%9F%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E9%96%8B%E7%99%BA%E3%81%97%E3%82%88%E3%81%86%EF%BC%81/dp/B0D1GGBP7H
   - rank: 4
     asin: B08YNMRH4J
     title: AIエンジニアのための機械学習システムデザインパターン
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/71lFtpbnV0S._SY425_.jpg
     rating: 5
     point: AI開発インフラの設計思想を学べる
-    affiliateUrl: https://www.amazon.co.jp/AI%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3/dp/B08YNMRH4J?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3/dp/B08YNMRH4J
   - rank: 5
     asin: B09B966P33
     title: ビジョナリー・カンパニーZERO ゼロから事業を生み出し、偉大で永続的な企業になる
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/61-rk86tsHL._SY466_.jpg
     rating: 5
     point: 技術企業の長期的成長戦略の本質を探る
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%93%E3%82%B8%E3%83%A7%E3%83%8A%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%8B%E3%83%BCZERO%20%E3%82%BC%E3%83%AD%E3%81%8B%E3%82%89%E4%BA%8B%E6%A5%AD%E3%82%92%E7%94%9F%E3%81%BF%E5%87%BA%E3%81%97%E3%80%81%E5%81%89%E5%A4%A7%E3%81%A7%E6%B0%B8%E7%B6%9A%E7%9A%84%E3%81%AA%E4%BC%81%E6%A5%AD%E3%81%AB%E3%81%AA%E3%82%8B/dp/B09B966P33?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%93%E3%82%B8%E3%83%A7%E3%83%8A%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%AB%E3%83%B3%E3%83%91%E3%83%8B%E3%83%BCZERO%20%E3%82%BC%E3%83%AD%E3%81%8B%E3%82%89%E4%BA%8B%E6%A5%AD%E3%82%92%E7%94%9F%E3%81%BF%E5%87%BA%E3%81%97%E3%80%81%E5%81%89%E5%A4%A7%E3%81%A7%E6%B0%B8%E7%B6%9A%E7%9A%84%E3%81%AA%E4%BC%81%E6%A5%AD%E3%81%AB%E3%81%AA%E3%82%8B/dp/B09B966P33
 ruby: |-
   AnthropicがJavaScriptランタイム「Bun」を{開発|かいはつ}するBun{社|しゃ}を{買収|ばいしゅう}したことが{発表|はっぴょう}された。{同時|どうじ}に、{同社|どうしゃ}のAIコーディングアシスタント「Claude Code」が{一般|いっぱん}{提供|ていきょう}{開始|かいし}から{約|やく}6カ{月|げつ}で{年間|ねんかん}{経常|けいじょう}{売上|うりあげ}{高|だか}10{億|おく}ドル{規模|きぼ}に{達|たっ}したことも{明|あき}らかになり、AI{開発|かいはつ}{競争|きょうそう}の{激化|げきか}を{象徴|しょうちょう}する{動|うご}きとして{注目|ちゅうもく}を{集|あつ}めている。
 

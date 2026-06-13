@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/81iBRoNG8BL._SY466_.jpg
     rating: 5
     point: AI開発における倫理的ジレンマを体系的に解説
-    affiliateUrl: https://www.amazon.co.jp/AI%E5%80%AB%E7%90%86%E3%80%80%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AF%E3%80%8C%E8%B2%AC%E4%BB%BB%E3%80%8D%E3%82%92%E3%81%A8%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B%20(%E4%B8%AD%E5%85%AC%E6%96%B0%E6%9B%B8%E3%83%A9%E3%82%AF%E3%83%AC)/dp/B07XFZBSQ4?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%E5%80%AB%E7%90%86%E3%80%80%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AF%E3%80%8C%E8%B2%AC%E4%BB%BB%E3%80%8D%E3%82%92%E3%81%A8%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B%20(%E4%B8%AD%E5%85%AC%E6%96%B0%E6%9B%B8%E3%83%A9%E3%82%AF%E3%83%AC)/dp/B07XFZBSQ4
   - rank: 2
     asin: B093KFTV53
     title: 監視資本主義―人類の未来を賭けた闘い
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/71zfbDLOFgS._SY425_.jpg
     rating: 5
     point: 大規模監視技術がもたらす社会的影響を分析
-    affiliateUrl: https://www.amazon.co.jp/%E7%9B%A3%E8%A6%96%E8%B3%87%E6%9C%AC%E4%B8%BB%E7%BE%A9%E2%80%95%E4%BA%BA%E9%A1%9E%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%82%92%E8%B3%AD%E3%81%91%E3%81%9F%E9%97%98%E3%81%84/dp/B093KFTV53?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%9B%A3%E8%A6%96%E8%B3%87%E6%9C%AC%E4%B8%BB%E7%BE%A9%E2%80%95%E4%BA%BA%E9%A1%9E%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%82%92%E8%B3%AD%E3%81%91%E3%81%9F%E9%97%98%E3%81%84/dp/B093KFTV53
   - rank: 3
     asin: B0FPQ4VV7K
     title: EUのAIガバナンス 新技術に対する国際的な科学技術ガバナンスに向けて/北和樹(著者) ブランド登録なし
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/41+PLb1wbzL._AC_.jpg
     rating: 5
     point: AI企業が担うべき社会的責任の枠組みを提示
-    affiliateUrl: https://www.amazon.co.jp/EU%E3%81%AEAI%E3%82%AC%E3%83%90%E3%83%8A%E3%83%B3%E3%82%B9%20%E6%96%B0%E6%8A%80%E8%A1%93%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E5%9B%BD%E9%9A%9B%E7%9A%84%E3%81%AA%E7%A7%91%E5%AD%A6%E6%8A%80%E8%A1%93%E3%82%AC%E3%83%90%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%AB%E5%90%91%E3%81%91%E3%81%A6%2F%E5%8C%97%E5%92%8C%E6%A8%B9(%E8%91%97%E8%80%85)%20%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E7%99%BB%E9%8C%B2%E3%81%AA%E3%81%97/dp/B0FPQ4VV7K?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/EU%E3%81%AEAI%E3%82%AC%E3%83%90%E3%83%8A%E3%83%B3%E3%82%B9%20%E6%96%B0%E6%8A%80%E8%A1%93%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E5%9B%BD%E9%9A%9B%E7%9A%84%E3%81%AA%E7%A7%91%E5%AD%A6%E6%8A%80%E8%A1%93%E3%82%AC%E3%83%90%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%AB%E5%90%91%E3%81%91%E3%81%A6%2F%E5%8C%97%E5%92%8C%E6%A8%B9(%E8%91%97%E8%80%85)%20%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E7%99%BB%E9%8C%B2%E3%81%AA%E3%81%97/dp/B0FPQ4VV7K
 ruby: |-
   2026{年|ねん}2{月|つき}26{日|にち}、AI{企業|きぎょう}Anthropicのダリオ・アモディCEOは、{米国防総省|べいこくぼうそうしょう}からAIの{安全対策|あんぜんたいさく}{撤廃|てっぱい}を{求|もと}められたことに{対|たい}し、{明確|めいかく}に{拒否|きょひ}する{声明|せいめい}を{発表|はっぴょう}した。{契約解除|けいやくかいじょ}や{国防生産法|こくぼうせいさんほう}{発動|はつどう}という{強|つよ}い{圧力|あつりょく}を{受|う}けても、{自律型兵器|じりつがたへいき}への{転用|てんよう}や{大規模監視|だいきぼかんし}システムへの{悪用|あくよう}を{防|ふせ}ぐため、{同社|どうしゃ}は{譲|ゆず}らない{姿勢|しせい}を{貫|つらぬ}いている。
 

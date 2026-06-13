@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/81Z9r8EpavL._SY425_.jpg
     rating: 5
     point: コンポーネント設計の基礎を体系的に学べる
-    affiliateUrl: https://www.amazon.co.jp/Design%20Systems%20%E2%80%95%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%97%E3%83%AD%E3%83%80%E3%82%AF%E3%83%88%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89/dp/B07PTXXK1S?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/Design%20Systems%20%E2%80%95%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%97%E3%83%AD%E3%83%80%E3%82%AF%E3%83%88%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89/dp/B07PTXXK1S
   - rank: 2
     asin: B07KXNKRMM
     title: UIデザインの教科書［新版］ マルチデバイス時代のインターフェース設計
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/815PJDcFTlL._SY385_.jpg
     rating: 5
     point: デザインとコードの関係性を丁寧に解説
-    affiliateUrl: https://www.amazon.co.jp/UI%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8%EF%BC%BB%E6%96%B0%E7%89%88%EF%BC%BD%20%E3%83%9E%E3%83%AB%E3%83%81%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E6%99%82%E4%BB%A3%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9%E8%A8%AD%E8%A8%88/dp/B07KXNKRMM?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/UI%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8%EF%BC%BB%E6%96%B0%E7%89%88%EF%BC%BD%20%E3%83%9E%E3%83%AB%E3%83%81%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E6%99%82%E4%BB%A3%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9%E8%A8%AD%E8%A8%88/dp/B07KXNKRMM
   - rank: 3
     asin: B0BHYXZCHG
     title: Figma for UIデザイン［日本語版対応］ アプリ開発のためのデザイン、プロトタイプ、ハンドオフ
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/811w1yvmURL._SY425_.jpg
     rating: 5
     point: Figmaの実践的な活用法を網羅している
-    affiliateUrl: https://www.amazon.co.jp/Figma%20for%20UI%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%EF%BC%BB%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E5%AF%BE%E5%BF%9C%EF%BC%BD%20%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%80%81%E3%83%97%E3%83%AD%E3%83%88%E3%82%BF%E3%82%A4%E3%83%97%E3%80%81%E3%83%8F%E3%83%B3%E3%83%89%E3%82%AA%E3%83%95/dp/B0BHYXZCHG?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/Figma%20for%20UI%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%EF%BC%BB%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88%E5%AF%BE%E5%BF%9C%EF%BC%BD%20%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%80%81%E3%83%97%E3%83%AD%E3%83%88%E3%82%BF%E3%82%A4%E3%83%97%E3%80%81%E3%83%8F%E3%83%B3%E3%83%89%E3%82%AA%E3%83%95/dp/B0BHYXZCHG
   - rank: 4
     asin: B01LW1BC2L
     title: ノンデザイナーズ・デザインブック　［第4版］
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/71cin2YZvcL._SY425_.jpg
     rating: 5
     point: デザイン原則をエンジニアも理解しやすい
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%8E%E3%83%B3%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%82%BA%E3%83%BB%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%96%E3%83%83%E3%82%AF%E3%80%80%EF%BC%BB%E7%AC%AC4%E7%89%88%EF%BC%BD/dp/B01LW1BC2L?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%8E%E3%83%B3%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%82%BA%E3%83%BB%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%96%E3%83%83%E3%82%AF%E3%80%80%EF%BC%BB%E7%AC%AC4%E7%89%88%EF%BC%BD/dp/B01LW1BC2L
   - rank: 5
     asin: B0FRKNFGZR
     title: "LangChain完全入門: 生成AIアプリケーション開発がはかどる大規模言語モデルの操り方、LLMを活用した次世代アプリ開発ガイド"
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/81wTN2cQZVL._SY522_.jpg
     rating: 5
     point: AIを活用した開発の全体像が掴める
-    affiliateUrl: https://www.amazon.co.jp/LangChain%E5%AE%8C%E5%85%A8%E5%85%A5%E9%96%80%3A%20%E7%94%9F%E6%88%90AI%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E3%81%8C%E3%81%AF%E3%81%8B%E3%81%A9%E3%82%8B%E5%A4%A7%E8%A6%8F%E6%A8%A1%E8%A8%80%E8%AA%9E%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%93%8D%E3%82%8A%E6%96%B9%E3%80%81LLM%E3%82%92%E6%B4%BB%E7%94%A8%E3%81%97%E3%81%9F%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%82%AC%E3%82%A4%E3%83%89/dp/B0FRKNFGZR?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/LangChain%E5%AE%8C%E5%85%A8%E5%85%A5%E9%96%80%3A%20%E7%94%9F%E6%88%90AI%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E3%81%8C%E3%81%AF%E3%81%8B%E3%81%A9%E3%82%8B%E5%A4%A7%E8%A6%8F%E6%A8%A1%E8%A8%80%E8%AA%9E%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%93%8D%E3%82%8A%E6%96%B9%E3%80%81LLM%E3%82%92%E6%B4%BB%E7%94%A8%E3%81%97%E3%81%9F%E6%AC%A1%E4%B8%96%E4%BB%A3%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%82%AC%E3%82%A4%E3%83%89/dp/B0FRKNFGZR
 ruby: |-
   2026{年|ねん}、FigmaとAnthropicが{歴史|れきし}{的|てき}な{提携|ていけい}を{発表|はっぴょう}し、Claude Codeで{生成|せいせい}したコードをFigmaキャンバスに{直接|ちょくせつ}インポートできる「Code to Canvas」{機能|きのう}がリリースされた。コードとデザインの{間|あいだ}に{長年|ながねん}{存在|そんざい}していた{壁|かべ}が、ついに{取|と}り{払|はら}われる{瞬間|しゅんかん}が{訪|おとず}れたのだ。
 

@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/71-Fbvph5pL._SY425_.jpg
     rating: 5
     point: 生成AIの法的課題を体系的に解説
-    affiliateUrl: https://www.amazon.co.jp/AI%E3%81%A8%E8%91%97%E4%BD%9C%E6%A8%A9/dp/B0CW3XCNDZ?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%E3%81%A8%E8%91%97%E4%BD%9C%E6%A8%A9/dp/B0CW3XCNDZ
   - rank: 2
     asin: B0CM38BC8G
     title: デジタル時代の　情報発信のリスクと対策
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/71q15d9LvbL._SY425_.jpg
     rating: 5
     point: 著作権法の基礎から最新動向まで網羅
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E6%99%82%E4%BB%A3%E3%81%AE%E3%80%80%E6%83%85%E5%A0%B1%E7%99%BA%E4%BF%A1%E3%81%AE%E3%83%AA%E3%82%B9%E3%82%AF%E3%81%A8%E5%AF%BE%E7%AD%96/dp/B0CM38BC8G?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E6%99%82%E4%BB%A3%E3%81%AE%E3%80%80%E6%83%85%E5%A0%B1%E7%99%BA%E4%BF%A1%E3%81%AE%E3%83%AA%E3%82%B9%E3%82%AF%E3%81%A8%E5%AF%BE%E7%AD%96/dp/B0CM38BC8G
   - rank: 3
     asin: B0FX4HXW4S
     title: 生成AI「思考」の裏側 なぜ賢いのか？ なぜ間違うのか？
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/81bT0RlmkVL._SY425_.jpg
     rating: 5
     point: AI技術の社会的影響を多角的に考察
-    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E3%80%8C%E6%80%9D%E8%80%83%E3%80%8D%E3%81%AE%E8%A3%8F%E5%81%B4%20%E3%81%AA%E3%81%9C%E8%B3%A2%E3%81%84%E3%81%AE%E3%81%8B%EF%BC%9F%20%E3%81%AA%E3%81%9C%E9%96%93%E9%81%95%E3%81%86%E3%81%AE%E3%81%8B%EF%BC%9F/dp/B0FX4HXW4S?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E7%94%9F%E6%88%90AI%E3%80%8C%E6%80%9D%E8%80%83%E3%80%8D%E3%81%AE%E8%A3%8F%E5%81%B4%20%E3%81%AA%E3%81%9C%E8%B3%A2%E3%81%84%E3%81%AE%E3%81%8B%EF%BC%9F%20%E3%81%AA%E3%81%9C%E9%96%93%E9%81%95%E3%81%86%E3%81%AE%E3%81%8B%EF%BC%9F/dp/B0FX4HXW4S
   - rank: 4
     asin: B00NOTKQ6C
     title: ジャーナリズムの現場から (講談社現代新書)
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/91paNXH76KL._SY522_.jpg
     rating: 5
     point: 報道機関とAIの関係性を深く掘り下げる
-    affiliateUrl: https://www.amazon.co.jp/%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%8A%E3%83%AA%E3%82%BA%E3%83%A0%E3%81%AE%E7%8F%BE%E5%A0%B4%E3%81%8B%E3%82%89%20(%E8%AC%9B%E8%AB%87%E7%A4%BE%E7%8F%BE%E4%BB%A3%E6%96%B0%E6%9B%B8)/dp/B00NOTKQ6C?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%8A%E3%83%AA%E3%82%BA%E3%83%A0%E3%81%AE%E7%8F%BE%E5%A0%B4%E3%81%8B%E3%82%89%20(%E8%AC%9B%E8%AB%87%E7%A4%BE%E7%8F%BE%E4%BB%A3%E6%96%B0%E6%9B%B8)/dp/B00NOTKQ6C
 ruby: |-
   2025{年|ねん}、The New York TimesがAI{検索|けんさく}サービスPerplexityを{著作権|ちょさくけん}{侵害|しんがい}で{提訴|ていそ}した。{有料|ゆうりょう}コンテンツの{無許可|むきょか}コピー・{配信|はいしん}に{加|くわ}え、AI{生成|せいせい}の{誤情報|ごじょうほう}とNYタイムズの{商標|しょうひょう}を{並|なら}べた{商標法|しょうひょうほう}{違反|いはん}も{訴|うった}えている。この{訴訟|そしょう}は、{生成|せいせい}AIと{既存|きそん}メディアの{対立|たいりつ}を{象徴|しょうちょう}する{重要|じゅうよう}な{法的|ほうてき}{争点|そうてん}となっている。
 

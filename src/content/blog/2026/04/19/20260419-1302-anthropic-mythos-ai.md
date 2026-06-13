@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/81iBRoNG8BL._SY466_.jpg
     rating: 5
     point: AI開発における倫理的判断の枠組みを学べる
-    affiliateUrl: https://www.amazon.co.jp/AI%E5%80%AB%E7%90%86%E3%80%80%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AF%E3%80%8C%E8%B2%AC%E4%BB%BB%E3%80%8D%E3%82%92%E3%81%A8%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B%20(%E4%B8%AD%E5%85%AC%E6%96%B0%E6%9B%B8%E3%83%A9%E3%82%AF%E3%83%AC)/dp/B07XFZBSQ4?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%E5%80%AB%E7%90%86%E3%80%80%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AF%E3%80%8C%E8%B2%AC%E4%BB%BB%E3%80%8D%E3%82%92%E3%81%A8%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%8B%20(%E4%B8%AD%E5%85%AC%E6%96%B0%E6%9B%B8%E3%83%A9%E3%82%AF%E3%83%AC)/dp/B07XFZBSQ4
   - rank: 2
     asin: B081SXLXT9
     title: サイバーセキュリティ―組織を脅威から守る戦略・人材・インテリジェンス―
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/71WG9ZFV9JL._SY425_.jpg
     rating: 5
     point: AIが悪用されるサイバー攻撃の実態を理解できる
-    affiliateUrl: https://www.amazon.co.jp/%E3%82%B5%E3%82%A4%E3%83%90%E3%83%BC%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E2%80%95%E7%B5%84%E7%B9%94%E3%82%92%E8%84%85%E5%A8%81%E3%81%8B%E3%82%89%E5%AE%88%E3%82%8B%E6%88%A6%E7%95%A5%E3%83%BB%E4%BA%BA%E6%9D%90%E3%83%BB%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AA%E3%82%B8%E3%82%A7%E3%83%B3%E3%82%B9%E2%80%95/dp/B081SXLXT9?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%82%B5%E3%82%A4%E3%83%90%E3%83%BC%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E2%80%95%E7%B5%84%E7%B9%94%E3%82%92%E8%84%85%E5%A8%81%E3%81%8B%E3%82%89%E5%AE%88%E3%82%8B%E6%88%A6%E7%95%A5%E3%83%BB%E4%BA%BA%E6%9D%90%E3%83%BB%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AA%E3%82%B8%E3%82%A7%E3%83%B3%E3%82%B9%E2%80%95/dp/B081SXLXT9
   - rank: 3
     asin: "4861827612"
     title: "AIには何ができないか: データジャーナリストが現場で考える"
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/71X+NjsNsEL._SY466_.jpg
     rating: 5
     point: AI技術の限界とリスクを現実的な視点で考察
-    affiliateUrl: https://www.amazon.co.jp/AI%E3%81%AB%E3%81%AF%E4%BD%95%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E3%81%8B%3A%20%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%8A%E3%83%AA%E3%82%B9%E3%83%88%E3%81%8C%E7%8F%BE%E5%A0%B4%E3%81%A7%E8%80%83%E3%81%88%E3%82%8B/dp/4861827612?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%E3%81%AB%E3%81%AF%E4%BD%95%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E3%81%8B%3A%20%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%8A%E3%83%AA%E3%82%B9%E3%83%88%E3%81%8C%E7%8F%BE%E5%A0%B4%E3%81%A7%E8%80%83%E3%81%88%E3%82%8B/dp/4861827612
   - rank: 4
     asin: B096X6BHS8
     title: プライバシーという権利　個人情報はなぜ守られるべきか (岩波新書)
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/61ziC8pUVKS._SY522_.jpg
     rating: 5
     point: 技術公開と社会的影響のバランスを考える基礎
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%A8%E3%81%84%E3%81%86%E6%A8%A9%E5%88%A9%E3%80%80%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%81%AF%E3%81%AA%E3%81%9C%E5%AE%88%E3%82%89%E3%82%8C%E3%82%8B%E3%81%B9%E3%81%8D%E3%81%8B%20(%E5%B2%A9%E6%B3%A2%E6%96%B0%E6%9B%B8)/dp/B096X6BHS8?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%A8%E3%81%84%E3%81%86%E6%A8%A9%E5%88%A9%E3%80%80%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%81%AF%E3%81%AA%E3%81%9C%E5%AE%88%E3%82%89%E3%82%8C%E3%82%8B%E3%81%B9%E3%81%8D%E3%81%8B%20(%E5%B2%A9%E6%B3%A2%E6%96%B0%E6%9B%B8)/dp/B096X6BHS8
   - rank: 5
     asin: B09YCB99MK
     title: ホワイトハッカーの教科書
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/71LSHyHzd4L._SY425_.jpg
     rating: 5
     point: 攻撃者の視点からAIの危険性を理解できる
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%8F%E3%83%83%E3%82%AB%E3%83%BC%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8/dp/B09YCB99MK?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%8F%E3%83%83%E3%82%AB%E3%83%BC%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8/dp/B09YCB99MK
 ruby: |-
   2026{年|ねん}、Anthropicが{開発|かいはつ}したAIモデル「Mythos Preview」が、サイバー{攻撃|こうげき}を{容易|ようい}にする{危険|きけん}{性|せい}を{理由|りゆう}に{一般|いっぱん}{公開|こうかい}を{見送|みおく}られた。AI{企業|きぎょう}が{性能|せいのう}ではなくリスクを{理由|りゆう}にモデル{公開|こうかい}を{中止|ちゅうし}するのは{極|きわ}めて{異例|いれい}のことだ。この{決断|けつだん}は、AI{技術|ぎじゅつ}{開発|かいはつ}が{新|あら}たな{段階|だんかい}に{入|はい}ったことを{示|しめ}している。
 

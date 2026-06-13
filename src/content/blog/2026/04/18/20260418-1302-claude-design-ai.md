@@ -17,7 +17,7 @@ books:
     image: https://m.media-amazon.com/images/I/81LorsCz56L._SY522_.jpg
     rating: 5
     point: AI時代のデザイナー像を具体的に解説
-    affiliateUrl: https://www.amazon.co.jp/%E3%80%8E%E7%94%9F%E7%94%A3%E6%80%A7%C3%97%E5%89%B5%E9%80%A0%E6%80%A7%EF%BC%9D%E7%84%A1%E9%99%90%E5%A4%A7%EF%BC%81%E6%9C%80%E6%96%B0AI%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E6%B4%BB%E7%94%A8%E3%81%AE%E6%A5%B5%E6%84%8F%E3%80%8F%3A%20%E7%94%9F%E6%88%90AI%E6%9C%80%E5%89%8D%E7%B7%9A%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E5%AE%9F%E8%B7%B5%E7%9A%84%E5%85%B1%E5%89%B5%E8%A1%93/dp/B0FDF9X3HD?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%80%8E%E7%94%9F%E7%94%A3%E6%80%A7%C3%97%E5%89%B5%E9%80%A0%E6%80%A7%EF%BC%9D%E7%84%A1%E9%99%90%E5%A4%A7%EF%BC%81%E6%9C%80%E6%96%B0AI%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E6%B4%BB%E7%94%A8%E3%81%AE%E6%A5%B5%E6%84%8F%E3%80%8F%3A%20%E7%94%9F%E6%88%90AI%E6%9C%80%E5%89%8D%E7%B7%9A%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E5%AE%9F%E8%B7%B5%E7%9A%84%E5%85%B1%E5%89%B5%E8%A1%93/dp/B0FDF9X3HD
   - rank: 2
     asin: B01JG39IR2
     title: 伝わるデザインの基本　増補改訂版　よい資料を作るためのレイアウトのルール
@@ -26,7 +26,7 @@ books:
     image: https://m.media-amazon.com/images/I/81L0+hhrF0L._SY385_.jpg
     rating: 5
     point: AIへの効果的な指示方法を体系的に学べる
-    affiliateUrl: https://www.amazon.co.jp/%E4%BC%9D%E3%82%8F%E3%82%8B%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E5%9F%BA%E6%9C%AC%E3%80%80%E5%A2%97%E8%A3%9C%E6%94%B9%E8%A8%82%E7%89%88%E3%80%80%E3%82%88%E3%81%84%E8%B3%87%E6%96%99%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB/dp/B01JG39IR2?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E4%BC%9D%E3%82%8F%E3%82%8B%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E5%9F%BA%E6%9C%AC%E3%80%80%E5%A2%97%E8%A3%9C%E6%94%B9%E8%A8%82%E7%89%88%E3%80%80%E3%82%88%E3%81%84%E8%B3%87%E6%96%99%E3%82%92%E4%BD%9C%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB/dp/B01JG39IR2
   - rank: 3
     asin: B08DR9LSB6
     title: ハーバード・ビジネス・レビュー　デザインシンキング論文ベスト10 デザイン思考の教科書
@@ -35,7 +35,7 @@ books:
     image: https://m.media-amazon.com/images/I/81onJzcQWzL._SY425_.jpg
     rating: 5
     point: AI活用の前提となる思考法を習得できる
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%89%E3%83%BB%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%BB%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%80%80%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%B7%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E8%AB%96%E6%96%87%E3%83%99%E3%82%B9%E3%83%8810%20%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%80%9D%E8%80%83%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8/dp/B08DR9LSB6?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%8F%E3%83%BC%E3%83%90%E3%83%BC%E3%83%89%E3%83%BB%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%BB%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%80%80%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%B7%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E8%AB%96%E6%96%87%E3%83%99%E3%82%B9%E3%83%8810%20%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%80%9D%E8%80%83%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8/dp/B08DR9LSB6
   - rank: 4
     asin: B08XJ386WH
     title: "ノーコード革命: 小学生でも３時間でアプリ開発できる時代がやってきた!"
@@ -44,7 +44,7 @@ books:
     image: https://m.media-amazon.com/images/I/61RemYJY4mL._SY425_.jpg
     rating: 5
     point: 技術民主化の文脈でAIツールを理解できる
-    affiliateUrl: https://www.amazon.co.jp/%E3%83%8E%E3%83%BC%E3%82%B3%E3%83%BC%E3%83%89%E9%9D%A9%E5%91%BD%3A%20%E5%B0%8F%E5%AD%A6%E7%94%9F%E3%81%A7%E3%82%82%EF%BC%93%E6%99%82%E9%96%93%E3%81%A7%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%81%A7%E3%81%8D%E3%82%8B%E6%99%82%E4%BB%A3%E3%81%8C%E3%82%84%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F!/dp/B08XJ386WH?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/%E3%83%8E%E3%83%BC%E3%82%B3%E3%83%BC%E3%83%89%E9%9D%A9%E5%91%BD%3A%20%E5%B0%8F%E5%AD%A6%E7%94%9F%E3%81%A7%E3%82%82%EF%BC%93%E6%99%82%E9%96%93%E3%81%A7%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA%E3%81%A7%E3%81%8D%E3%82%8B%E6%99%82%E4%BB%A3%E3%81%8C%E3%82%84%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F!/dp/B08XJ386WH
   - rank: 5
     asin: B0G6KRKYDB
     title: "AI対応Obsidianワークフロー設計術: 生成系プラグインで知識循環を加速"
@@ -53,7 +53,7 @@ books:
     image: https://m.media-amazon.com/images/I/81vBBMh-hrL._SY466_.jpg
     rating: 5
     point: AI協働時代の業務プロセス再構築を学べる
-    affiliateUrl: https://www.amazon.co.jp/AI%E5%AF%BE%E5%BF%9CObsidian%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E8%A8%AD%E8%A8%88%E8%A1%93%3A%20%E7%94%9F%E6%88%90%E7%B3%BB%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%A7%E7%9F%A5%E8%AD%98%E5%BE%AA%E7%92%B0%E3%82%92%E5%8A%A0%E9%80%9F/dp/B0G6KRKYDB?tag=yomirank-22
+    affiliateUrl: https://www.amazon.co.jp/AI%E5%AF%BE%E5%BF%9CObsidian%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E8%A8%AD%E8%A8%88%E8%A1%93%3A%20%E7%94%9F%E6%88%90%E7%B3%BB%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%A7%E7%9F%A5%E8%AD%98%E5%BE%AA%E7%92%B0%E3%82%92%E5%8A%A0%E9%80%9F/dp/B0G6KRKYDB
 ruby: |-
   2026{年|ねん}、Anthropicが{最新|さいしん}モデル「Claude Opus 4.7」を{基盤|きばん}とするAIデザインツール「Claude Design」をリサーチプレビューとして{発表|はっぴょう}した。このツールは{指示|しじ}やファイルからプロトタイプを{自動|じどう}{生成|せいせい}し、Canvaとの{連携|れんけい}も{可能|かのう}で、デザインから{実装|じっそう}までの{業務|ぎょうむ}プロセスにAI{統合|とうごう}の{波|なみ}をもたらしている。
 
